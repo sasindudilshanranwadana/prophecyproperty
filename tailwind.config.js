@@ -1,0 +1,97 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        "idrealestatecomau-athens-gray": "#f6f5f7",
+        "wwwrealestatecomau-white-02": "rgba(255, 255, 255, 0)",
+        "idrealestatecomau-mountain-mist": "#959199",
+        "idrealestatecomau-white": "#fff",
+        "idrealestatecomau-ship-gray": "#3d3b40",
+        "idrealestatecomau-mischka": "#e5e3e8",
+        "idrealestatecomau-bahama-blue": "#00639e",
+        "colors-blue": "#007aff",
+        cornflowerblue: "#26a1ff",
+        "idrealestatecomau-salt-box": "#726e75",
+        black: "#000",
+        "wwwrealestatecomau-monza": "#e4002b",
+        "wwwrealestatecomau-mosque": "#006875",
+        gray: {
+          "100": "#7a7880",
+          "200": "rgba(122, 120, 128, 0.09)",
+        },
+        dimgray: "#636166",
+        lightgray: {
+          "100": "#ccc9cf",
+          "200": "rgba(204, 201, 207, 0.09)",
+        },
+        "wwwrealestatecomau-blue": "#0000ff",
+        "wwwrealestatecomau-iron": "#d2d5da",
+        mediumblue: "#3333ff",
+        "idrealestatecomau-azure-radiance": "#1877f2",
+        dodgerblue: "#3091ff",
+      },
+      spacing: {},
+      fontFamily: {
+        "idrealestatecomau-inter-regular-1575": "Inter",
+      },
+      borderRadius: {
+        "13xl": "32px",
+      },
+    },
+    fontSize: {
+      "base-8": "15.8px",
+      base: "16px",
+      "base-9": "15.9px",
+      "3xl-1": "22.1px",
+      lg: "18px",
+      xl: "20px",
+      "base-6": "15.6px",
+      "base-5": "15.5px",
+      "mini-6": "14.6px",
+      "mini-8": "14.8px",
+      "sm-7": "13.7px",
+      "smi-9": "12.9px",
+      "sm-6": "13.6px",
+      "sm-8": "13.8px",
+      "smi-7": "12.7px",
+      sm: "14px",
+      "sm-2": "13.2px",
+      "2xl-9": "21.9px",
+      "xs-6": "11.6px",
+      "mini-4": "14.4px",
+      "xs-4": "11.4px",
+      "mini-5": "14.5px",
+      "mini-3": "14.3px",
+      "lg-4": "18.4px",
+      "lg-3": "18.3px",
+      "base-1": "15.1px",
+      "mini-9": "14.9px",
+      "base-4": "15.4px",
+      mini: "15px",
+      "2xl-6": "21.6px",
+      inherit: "inherit",
+    },
+    screens: {
+      lg: {
+        max: "1200px",
+      },
+      mq1050: {
+        raw: "screen and (max-width: 1050px)",
+      },
+      mq750: {
+        raw: "screen and (max-width: 750px)",
+      },
+      mq500: {
+        raw: "screen and (max-width: 500px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
+    },
+  },
+  corePlugins: {
+    preflight: false,
+  },
+};
