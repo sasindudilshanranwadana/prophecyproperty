@@ -1,0 +1,385 @@
+.heading2 {
+  align-self: stretch;
+  height: 36px;
+}
+.gettyimages1324121174920081dIcon {
+  width: 100%;
+  flex: 1;
+  position: relative;
+  max-width: 340px;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.australianHousingMarket {
+  position: relative;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.link1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.australiasUltimateSpring {
+  margin: 0;
+}
+.australiasUltimateSpringContainer {
+  height: 68px;
+  position: relative;
+  line-height: 34px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.link2 {
+  align-items: center;
+  padding: 0 var(--padding-3xl) var(--padding-12xs-6);
+}
+.container4,
+.link2,
+.linkmargin {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.linkmargin {
+  align-items: flex-start;
+  padding: var(--padding-4xs-4) 0 0;
+  text-align: center;
+  font-size: var(--wwwrealestatecomau-inter-regular-1984-size);
+  color: var(--wwwrealestatecomau-limed-spruce);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.container4 {
+  align-items: center;
+}
+.container3,
+.margin {
+  width: 100%;
+  justify-content: flex-start;
+  max-width: 340px;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.margin {
+  padding: var(--padding-9xl) 0 0;
+  box-sizing: border-box;
+}
+.article,
+.link3,
+.margin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.article {
+  height: 378px;
+  width: 340px;
+  justify-content: space-between;
+  min-width: 340px;
+  max-width: 100%;
+}
+.link3 {
+  align-self: stretch;
+  height: 255px;
+  justify-content: center;
+}
+.link5,
+.linkmargin1 {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.link5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--padding-5xs) var(--padding-12xs-6);
+  flex-shrink: 0;
+}
+.linkmargin1 {
+  align-items: flex-start;
+  padding: var(--padding-4xs-4) 0 0;
+  text-align: center;
+  font-size: var(--wwwrealestatecomau-inter-regular-1938-size);
+  color: var(--wwwrealestatecomau-limed-spruce);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.article1,
+.container5,
+.linkmargin1 {
+  display: flex;
+  flex-direction: column;
+}
+.container5 {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 340px;
+}
+.article1 {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 378px;
+}
+.articlemargin,
+.container2 {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.articlemargin {
+  flex-direction: column;
+  padding: 0 0 0 var(--padding-11xl);
+  box-sizing: border-box;
+  min-width: 240px;
+}
+.container2 {
+  flex-direction: row;
+  row-gap: 20px;
+}
+.anArtistImpressionOfTheLaIcon {
+  width: 100%;
+  flex: 1;
+  position: relative;
+  max-width: 125px;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link6 {
+  height: 96px;
+  width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.newHomesWillContainer,
+.southWest {
+  align-self: stretch;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+.southWest {
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.newHomesWillContainer {
+  line-height: 23px;
+}
+.link8,
+.linkmargin2 {
+  display: flex;
+  align-items: flex-start;
+}
+.link8 {
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-12xs-7);
+}
+.linkmargin2 {
+  padding: var(--padding-4xs-3) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+  color: var(--wwwrealestatecomau-limed-spruce);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.container8,
+.linkmargin2 {
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.article2,
+.container8,
+.margin3 {
+  display: flex;
+  align-items: flex-start;
+}
+.margin3 {
+  width: 205px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 var(--padding-mini);
+  box-sizing: border-box;
+}
+.article2 {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-0);
+  row-gap: 20px;
+}
+.linkmargin3 {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: var(--padding-4xs-3) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-semi-bold-16-size);
+  color: var(--wwwrealestatecomau-limed-spruce);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.articlemargin1,
+.link12,
+.linkmargin3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.articlemargin1 {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: var(--padding-9xl) 0 0;
+}
+.link12 {
+  height: 94px;
+  width: 125px;
+  justify-content: center;
+}
+.australianHousingMarketContainer {
+  align-self: stretch;
+  height: 36px;
+  position: relative;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.container12,
+.linkmargin4 {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.linkmargin4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-4xs-3) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1588-underline-size);
+  color: var(--wwwrealestatecomau-limed-spruce);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.container12 {
+  padding: 0 0 var(--padding-10xs);
+}
+.container12,
+.container7,
+.margin2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container7 {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-17xl);
+}
+.margin2 {
+  width: 360px;
+  justify-content: center;
+  padding: 0 0 0 var(--padding-11xl);
+  box-sizing: border-box;
+  min-width: 360px;
+  max-width: 100%;
+}
+.container,
+.container1,
+.section {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.container1 {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-3xs) 0 0;
+  row-gap: 20px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.container,
+.section {
+  flex-direction: column;
+}
+.container {
+  width: 100%;
+  align-items: flex-start;
+  padding: var(--padding-lgi-9) var(--padding-mini) 0;
+  gap: var(--gap-lgi-9);
+  max-width: 1110px;
+}
+.section {
+  align-self: stretch;
+  background-color: var(--idrealestatecomau-white);
+  align-items: center;
+  padding: var(--padding-11xl) var(--padding-xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inconsolata-bold-12-upper-size);
+  color: var(--wwwrealestatecomau-pale-sky);
+  font-family: var(--wwwrealestatecomau-inconsolata-bold-12-upper);
+}
+@media screen and (max-width: 1125px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .article {
+    flex: 1;
+  }
+  .container2 {
+    flex-wrap: wrap;
+  }
+  .container2,
+  .margin2 {
+    min-width: 100%;
+  }
+  .section {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .article {
+    min-width: 100%;
+  }
+  .article2 {
+    flex-wrap: wrap;
+  }
+}

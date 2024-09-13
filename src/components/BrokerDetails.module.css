@@ -1,0 +1,136 @@
+.labelPostcode {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.placeholder {
+  width: 161px;
+  border: 0;
+  outline: 0;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  font-size: var(--wwwrealestatecomau-inter-regular-14-size);
+  background-color: transparent;
+  height: 17px;
+  position: relative;
+  color: var(--wwwrealestatecomau-ship-gray);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.container1,
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container1 {
+  width: 160px;
+  height: 17px;
+  overflow: auto;
+  flex-shrink: 0;
+}
+.input {
+  height: 24px;
+  flex: 1;
+  background-color: var(--idrealestatecomau-white);
+  overflow: hidden;
+  padding: var(--padding-9xs) 0 var(--padding-10xs);
+}
+.border,
+.container,
+.input {
+  box-sizing: border-box;
+}
+.container {
+  height: 32px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-9xs) var(--padding-xs);
+  min-width: 110px;
+  max-height: 100px;
+}
+.border {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--wwwrealestatecomau-mountain-mist);
+  z-index: 1;
+}
+.background,
+.brokerNames {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.background {
+  border-radius: var(--br-5xs);
+  background-color: var(--idrealestatecomau-white);
+  flex-direction: row;
+  position: relative;
+}
+.brokerNames {
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.findABroker {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-medium-1269-size);
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  color: var(--idrealestatecomau-white);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-7xs) var(--padding-31xl) var(--padding-7xs)
+    var(--padding-32xl);
+  background-color: var(--wwwrealestatecomau-ship-gray);
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  box-sizing: border-box;
+  min-width: 32px;
+  min-height: 32px;
+  white-space: nowrap;
+}
+.button:hover {
+  background-color: var(--color-dimgray-200);
+}
+.brokerDetails,
+.brokerInfo,
+.button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.brokerInfo {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.brokerDetails {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inter-medium-1323-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}

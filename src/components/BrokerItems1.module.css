@@ -1,0 +1,173 @@
+.imageIcon {
+  height: 28px;
+  width: 158px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.background,
+.backgroundWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.background {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xs) var(--padding-10xl);
+  background-color: var(--wwwrealestatecomau-mosque);
+}
+.backgroundWrapper {
+  padding: 0 0 var(--padding-xs);
+}
+.samgjpgIcon {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  border-radius: var(--br-13xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.strongSam {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.mortgageBroker {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-regular-1356-size);
+  line-height: 20px;
+}
+.strongSamGhoreyshiParent {
+  flex-direction: column;
+}
+.backgroundshadowInner,
+.samgjpgParent,
+.strongSamGhoreyshiParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.samgjpgParent {
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.backgroundshadowInner {
+  flex-direction: row;
+  padding: 0 var(--padding-base) var(--padding-xs);
+}
+.basedInSydney,
+.seeMoreDetails {
+  position: relative;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.basedInSydney {
+  align-self: stretch;
+}
+.seeMoreDetails {
+  text-decoration: underline;
+  color: inherit;
+}
+.container,
+.link,
+.margin {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container,
+.margin {
+  align-self: stretch;
+  flex-direction: column;
+}
+.margin {
+  justify-content: flex-end;
+  padding: var(--padding-7xl) 0 var(--padding-5xs);
+  box-sizing: border-box;
+  min-height: 20px;
+}
+.backgroundshadowChild,
+.basedInSydneyParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.basedInSydneyParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.backgroundshadowChild {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+  font-size: var(--wwwrealestatecomau-inter-regular-1367-size);
+  color: var(--wwwrealestatecomau-salt-box);
+}
+.requestACall {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-medium-1291-size);
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  color: var(--wwwrealestatecomau-ship-gray);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid var(--wwwrealestatecomau-mountain-mist);
+  padding: var(--padding-9xs) var(--padding-9xl) var(--padding-9xs)
+    var(--padding-11xl);
+  background-color: transparent;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  flex-direction: row;
+  min-width: 32px;
+  min-height: 32px;
+  white-space: nowrap;
+}
+.button:hover {
+  background-color: var(--color-gray-200);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.backgroundshadow,
+.brokerItems,
+.button,
+.buttonWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buttonWrapper {
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+}
+.backgroundshadow,
+.brokerItems {
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.backgroundshadow {
+  align-self: stretch;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+  border-radius: var(--br-xs);
+  background-color: var(--idrealestatecomau-white);
+  overflow: hidden;
+  padding: 0 0 var(--padding-base);
+}
+.brokerItems {
+  width: 232px;
+  padding: 0 var(--padding-base) 0 0;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inter-regular-1575-underline-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}

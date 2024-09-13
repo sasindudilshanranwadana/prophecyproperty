@@ -1,0 +1,72 @@
+.realEstate {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-8xl) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-medium-1475-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+}
+.horizontalDivider {
+  height: 2px;
+  width: 276.5px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -0.2px;
+  left: 0;
+  background-color: var(--wwwrealestatecomau-monza);
+  flex-shrink: 0;
+}
+.footerLinks1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-lg) 0 0;
+}
+.footerLinksBorder,
+.horizontalborder {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.horizontalborder {
+  flex: 1;
+  border-bottom: 0.8px solid var(--wwwrealestatecomau-mischka);
+  overflow-x: auto;
+  justify-content: space-between;
+  padding: var(--padding-xs) var(--padding-61xl) var(--padding-2xs)
+    var(--padding-79xl);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.footerLinksBorder {
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-base);
+  text-align: center;
+  font-size: var(--wwwrealestatecomau-inter-regular-1463-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+@media screen and (max-width: 1200px) {
+  .horizontalborder {
+    padding-left: var(--padding-30xl);
+    padding-right: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .horizontalborder {
+    padding-left: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}

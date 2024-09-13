@@ -1,0 +1,97 @@
+.svgIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.linkFacebook,
+.linkTwittermargin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs-4) 0 0;
+}
+.linkTwittermargin {
+  padding: 0 0 0 var(--padding-base);
+  margin-left: -0.5px;
+}
+.container1 {
+  width: 1126px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: var(--padding-mini-8) var(--padding-xl);
+  max-width: 100%;
+}
+.background,
+.container,
+.container1,
+.footer {
+  box-sizing: border-box;
+  display: flex;
+}
+.container {
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: var(--padding-xs) 0 var(--padding-xs) var(--padding-xs);
+  max-width: 1126px;
+  gap: var(--gap-xl);
+}
+.background,
+.footer {
+  flex-direction: column;
+  max-width: 100%;
+}
+.background {
+  align-self: stretch;
+  background-color: var(--idrealestatecomau-white);
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.footer {
+  position: absolute;
+  top: 1935px;
+  left: 0;
+  border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
+  width: 1920px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xs-8) 0 0;
+}
+.footerParent {
+  align-self: stretch;
+  height: 2015.8px;
+  position: relative;
+  max-width: 100%;
+}
+.searchReasultBuy {
+  width: 100%;
+  position: relative;
+  background-color: var(--idrealestatecomau-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-7xs-2);
+  box-sizing: border-box;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1125px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footerParent {
+    height: auto;
+    min-height: 2015.8;
+  }
+}

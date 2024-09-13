@@ -1,0 +1,177 @@
+.imageIcon {
+  height: 28px;
+  width: 158px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.background,
+.backgroundWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.background {
+  background-color: var(--wwwrealestatecomau-mosque);
+  padding: var(--padding-2xs) var(--padding-10xl);
+}
+.backgroundWrapper {
+  padding: 0 0 var(--padding-xs);
+}
+.adambroughtonjpgIcon {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  border-radius: var(--br-13xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.strongAdam {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.mortgageBroker {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-regular-1356-size);
+  line-height: 20px;
+}
+.strongAdamBroughtonParent {
+  flex-direction: column;
+}
+.adambroughtonjpgParent,
+.backgroundshadowInner,
+.strongAdamBroughtonParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.adambroughtonjpgParent {
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.backgroundshadowInner {
+  flex-direction: row;
+  padding: 0 var(--padding-base) var(--padding-xs);
+  color: var(--wwwrealestatecomau-ship-gray);
+}
+.basedInRandwick {
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+}
+.padstowCallback {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-mini) var(--padding-xs) var(--padding-base);
+  font-size: var(--wwwrealestatecomau-inter-regular-1378-size);
+}
+.seeMoreDetails {
+  position: relative;
+  text-decoration: underline;
+  line-height: 20px;
+  color: inherit;
+  white-space: nowrap;
+}
+.container,
+.link {
+  justify-content: flex-start;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.container {
+  align-self: stretch;
+  flex-direction: column;
+}
+.container,
+.margin,
+.marginWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.margin {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--padding-7xl) 0 var(--padding-5xs);
+  box-sizing: border-box;
+  min-height: 20px;
+}
+.marginWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 var(--padding-base);
+  font-size: var(--wwwrealestatecomau-inter-regular-1367-size);
+}
+.requestACall {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-medium-1291-size);
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  color: var(--wwwrealestatecomau-ship-gray);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid var(--wwwrealestatecomau-mountain-mist);
+  padding: var(--padding-9xs) var(--padding-9xl) var(--padding-9xs)
+    var(--padding-11xl);
+  background-color: transparent;
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  flex-direction: row;
+  min-width: 32px;
+  min-height: 32px;
+  white-space: nowrap;
+}
+.button:hover {
+  background-color: var(--color-gray-200);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.backgroundshadow,
+.brokerCard,
+.button,
+.padstowCallback1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.padstowCallback1 {
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+}
+.backgroundshadow,
+.brokerCard {
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.backgroundshadow {
+  align-self: stretch;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+  border-radius: var(--br-xs);
+  background-color: var(--idrealestatecomau-white);
+  overflow: hidden;
+  padding: 0 0 var(--padding-base);
+}
+.brokerCard {
+  width: 232px;
+  padding: 0 var(--padding-base) 0 0;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inter-regular-1588-underline-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}

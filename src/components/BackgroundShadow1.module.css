@@ -1,0 +1,273 @@
+.svgIcon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+.container,
+.margin {
+  align-items: flex-start;
+}
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.margin {
+  width: calc(100% - 357px);
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 24px;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 var(--padding-5xs);
+  box-sizing: border-box;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  min-width: 172px;
+}
+.button,
+.buttonmargin,
+.margin {
+  display: flex;
+  justify-content: flex-start;
+}
+.button {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-5xs) var(--padding-314xl) var(--padding-5xs)
+    var(--padding-5xs);
+  row-gap: 20px;
+}
+.buttonmargin {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-base) var(--padding-5xs);
+  box-sizing: border-box;
+  min-width: 414px;
+  max-width: 100%;
+}
+.propertyType {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.button1,
+.buttonmargin1 {
+  display: flex;
+  box-sizing: border-box;
+}
+.button1 {
+  border-radius: var(--br-5xl);
+  border: 1px solid var(--wwwrealestatecomau-mischka);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-7xs) var(--padding-mid);
+  min-width: 40px;
+  min-height: 40px;
+  white-space: nowrap;
+}
+.buttonmargin1 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xs) var(--padding-base) 0;
+  min-width: 48px;
+  min-height: 72px;
+}
+.price {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-medium-1488-size);
+  line-height: 24px;
+  font-weight: 500;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  color: var(--wwwrealestatecomau-ship-gray);
+  text-align: center;
+}
+.button2,
+.buttonmargin2 {
+  display: flex;
+  box-sizing: border-box;
+}
+.button2 {
+  cursor: pointer;
+  border: 1px solid var(--wwwrealestatecomau-mischka);
+  padding: var(--padding-7xs) var(--padding-mid);
+  background-color: transparent;
+  align-self: stretch;
+  border-radius: var(--br-5xl);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+.button2:hover {
+  background-color: var(--color-lightgray-200);
+  border: 1px solid var(--color-lightgray-100);
+  box-sizing: border-box;
+}
+.buttonmargin2 {
+  width: 82.6px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xs) var(--padding-base) 0;
+  min-width: 48px;
+  min-height: 72px;
+}
+.bed {
+  text-decoration: none;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  color: inherit;
+}
+.button3,
+.buttonmargin3 {
+  display: flex;
+  box-sizing: border-box;
+}
+.button3 {
+  align-self: stretch;
+  border-radius: var(--br-5xl);
+  border: 1px solid var(--wwwrealestatecomau-mischka);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-7xs) var(--padding-mid);
+  min-width: 40px;
+  min-height: 40px;
+}
+.buttonmargin3 {
+  width: 74.6px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xs) var(--padding-base) 0;
+  min-width: 48px;
+  min-height: 72px;
+  font-size: var(--wwwrealestatecomau-inter-regular-1525-size);
+}
+.filters {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-medium-1475-size);
+  line-height: 24px;
+  font-weight: 500;
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+  color: var(--wwwrealestatecomau-ship-gray);
+  text-align: center;
+}
+.button4,
+.container1,
+.margin1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.button4,
+.margin1 {
+  align-items: flex-start;
+  padding: 0 0 0 var(--padding-5xs);
+}
+.button4 {
+  cursor: pointer;
+  border: 1px solid var(--wwwrealestatecomau-mischka);
+  padding: var(--padding-7xs) var(--padding-lg);
+  background-color: transparent;
+  border-radius: var(--br-5xl);
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+.map {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+.link,
+.linkmargin {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.link {
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-5xs);
+  min-width: 40px;
+  min-height: 40px;
+}
+.linkmargin {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-base) var(--padding-5xs) var(--padding-base) 0;
+  min-width: 48px;
+  min-height: 72px;
+  font-size: var(--wwwrealestatecomau-inter-medium-1475-size);
+}
+.background,
+.backgroundshadow {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.background {
+  width: 100%;
+  background-color: var(--idrealestatecomau-white);
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0;
+  gap: var(--gap-0);
+  max-width: 1126px;
+  row-gap: 20px;
+}
+.backgroundshadow {
+  align-self: stretch;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: var(--wwwrealestatecomau-white-02);
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--wwwrealestatecomau-inter-regular-1463-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+@media screen and (max-width: 1125px) {
+  .background {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .button {
+    flex-wrap: wrap;
+    padding-right: var(--padding-147xl);
+    box-sizing: border-box;
+  }
+  .buttonmargin {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .button {
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

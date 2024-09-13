@@ -1,0 +1,111 @@
+.hlVisionShot1NoTreeFinalIcon {
+  height: 128px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.picture {
+  align-self: stretch;
+  border-radius: var(--br-9xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.wellnessPerksOf {
+  margin: 0;
+}
+.wellnessPerksOfContainer {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.heading3 {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 48px;
+}
+.presentedBy {
+  position: relative;
+  line-height: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+.margin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-10xs) 0 0;
+}
+.logo5924086b7813pngIcon {
+  height: 30px;
+  width: 106.2px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  max-width: 144px;
+  max-height: 30px;
+}
+.article,
+.container {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.container {
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 var(--padding-21xl) 0 0;
+  box-sizing: border-box;
+  font-size: var(--wwwrealestatecomau-inter-regular-1163-size);
+  color: var(--wwwrealestatecomau-salt-box);
+}
+.article {
+  gap: var(--gap-xs);
+}
+.article,
+.item,
+.itemmargin,
+.newsItemSeparator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.item {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.itemmargin,
+.newsItemSeparator {
+  flex-shrink: 0;
+}
+.itemmargin {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 0 0 var(--padding-base);
+}
+.newsItemSeparator {
+  width: 256px;
+  justify-content: flex-start;
+  padding: 0 var(--padding-base) 0 0;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inter-medium-1425-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}

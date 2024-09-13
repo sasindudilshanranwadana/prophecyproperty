@@ -1,0 +1,195 @@
+.realEstateIn {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.ausProperty {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  color: var(--wwwrealestatecomau-ship-gray);
+}
+.realEstateNsw {
+  flex-shrink: 0;
+}
+.realEstateNsw,
+.realEstateVic {
+  position: relative;
+  text-decoration: underline;
+  line-height: 24px;
+  color: inherit;
+}
+.vICtoBRI {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+}
+.realEstateQld {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-regular-1588-underline-size);
+  text-decoration: underline;
+  line-height: 24px;
+  color: inherit;
+  flex-shrink: 0;
+}
+.realEstateSaWrapper,
+.stateLinks {
+  display: flex;
+  align-items: flex-start;
+}
+.stateLinks {
+  width: 861px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  font-size: var(--wwwrealestatecomau-inter-regular-1575-underline-size);
+}
+.realEstateSaWrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xs) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+}
+.realEstateTas {
+  position: relative;
+  font-size: var(--wwwrealestatecomau-inter-regular-155-underline-size);
+  text-decoration: underline;
+  line-height: 24px;
+  color: inherit;
+  flex-shrink: 0;
+}
+.stateLinks1 {
+  width: 856px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  font-size: var(--wwwrealestatecomau-inter-regular-1575-underline-size);
+}
+.realEstateNtWrapper,
+.stateLinks1,
+.stateLinks2 {
+  display: flex;
+  align-items: flex-start;
+}
+.realEstateNtWrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 var(--padding-5xs) 0 0;
+}
+.stateLinks2 {
+  width: 882px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.realEstateMelbourne {
+  width: 168px;
+  position: relative;
+  text-decoration: underline;
+  line-height: 24px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.realEstateBrisbaneWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-sm) 0 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+}
+.stateLinks3 {
+  width: 867px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  font-size: var(--wwwrealestatecomau-inter-regular-1575-underline-size);
+}
+.realEstateAdelaide,
+.realEstateDarwin {
+  position: relative;
+  text-decoration: underline;
+  line-height: 24px;
+  color: inherit;
+}
+.realEstateAdelaide {
+  white-space: nowrap;
+}
+.realEstateDarwin {
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+}
+.adeDarHob {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--wwwrealestatecomau-inter-regular-1575-underline-size);
+}
+.adeDarHob,
+.none,
+.otherCities,
+.section {
+  display: flex;
+  align-items: flex-start;
+}
+.none {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 var(--padding-smi) 0 0;
+}
+.otherCities,
+.section {
+  width: 896px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.section {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-base) 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 1142px;
+  text-align: left;
+  font-size: var(--wwwrealestatecomau-inter-regular-1563-underline-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+@media screen and (max-width: 1200px) {
+  .section {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .otherCities,
+  .stateLinks,
+  .stateLinks2,
+  .stateLinks3 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  .stateLinks1 {
+    flex-wrap: wrap;
+  }
+}

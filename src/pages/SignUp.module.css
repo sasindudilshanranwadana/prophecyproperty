@@ -1,0 +1,113 @@
+.prophecyproperty {
+  position: relative;
+  line-height: 24px;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.createAccount {
+  position: relative;
+  line-height: 36px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.container,
+.heading1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  font-size: var(--wwwrealestatecomau-inter-semi-bold-2213-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+}
+.header,
+.pageContent {
+  justify-content: flex-start;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-21xl) var(--padding-21xl) 31.6px;
+  box-sizing: border-box;
+  gap: var(--gap-lg-4);
+  max-width: 500px;
+}
+.pageContent {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-29xl);
+  max-width: 100%;
+}
+.backgroundshadow,
+.pageContent,
+.signup {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.backgroundshadow {
+  width: 500px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+  border-radius: var(--br-xs);
+  background-color: var(--wwwrealestatecomau-white-02);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--wwwrealestatecomau-black);
+  font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
+}
+.signup {
+  width: 100%;
+  position: relative;
+  background-color: var(--idrealestatecomau-athens-gray);
+  flex-direction: row;
+  justify-content: center;
+  padding: 220.5px var(--padding-xl);
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1025px) {
+  .header {
+    max-width: 100%;
+  }
+  .pageContent {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    max-width: 100%;
+  }
+  .pageContent {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .prophecyproperty {
+    font-size: var(--wwwrealestatecomau-inter-semi-bold-16-size);
+    line-height: 19px;
+  }
+  .createAccount {
+    font-size: var(--wwwrealestatecomau-inter-regular-18-size);
+    line-height: 29px;
+  }
+}
