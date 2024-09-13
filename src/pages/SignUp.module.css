@@ -1,6 +1,8 @@
 .prophecyproperty {
   position: relative;
   line-height: 24px;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Keep the same text color */
 }
 .link {
   display: flex;
@@ -58,8 +60,7 @@
   box-sizing: border-box;
 }
 .backgroundshadow {
-  width: 500px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+
   border-radius: var(--br-xs);
   background-color: var(--wwwrealestatecomau-white-02);
   flex-direction: column;
@@ -110,4 +111,5 @@
     font-size: var(--wwwrealestatecomau-inter-regular-18-size);
     line-height: 29px;
   }
+  
 }

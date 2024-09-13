@@ -1,5 +1,6 @@
-import InputBackground from "../components/InputBackground";
-import styles from "./SignUp.module.css";
+import FormBackground from "../components/FormBackground";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import styles from "./SignUp.module.css"; // Use correct SignUp styles
 
 const SignUp = () => {
   return (
@@ -7,16 +8,19 @@ const SignUp = () => {
       <footer className={styles.backgroundshadow}>
         <div className={styles.header}>
           <div className={styles.link}>
-            <b className={styles.prophecyproperty}>ProphecyProperty</b>
+            {/* Link to the home page */}
+            <Link to="/" className={styles.prophecyproperty}>
+              ProphecyProperty
+            </Link>
           </div>
           <div className={styles.container}>
             <div className={styles.heading1}>
-              <div className={styles.createAccount}>Create account</div>
+              <div className={styles.createAccount}>Sign Up</div>
             </div>
           </div>
         </div>
-        <div className={styles.pageContent}>
-          <InputBackground />
+        <div className={styles.formBackgroundWrapper}>
+          <FormBackground isSignUp={true} /> {/* Pass isSignUp={true} to render additional fields */}
         </div>
       </footer>
     </div>

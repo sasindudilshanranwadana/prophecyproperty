@@ -1,9 +1,41 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import styles from "./FormBackground.module.css";
 
-const FormBackground = ({ className = "" }) => {
+const FormBackground = ({ className = "", isSignUp = false }) => {
   return (
     <form className={[styles.formBackground, className].join(" ")}>
+      {/* Conditionally render First Name and Last Name fields if it's SignUp */}
+      {isSignUp && (
+        <>
+          <div className={styles.background}>
+            <div className={styles.input} />
+            <img className={styles.imageIcon} alt="" src="/image.svg" />
+            <div className={styles.emailField}>
+              <div className={styles.label} />
+              <input
+                className={styles.background1}
+                placeholder="First Name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className={styles.background}>
+            <div className={styles.input} />
+            <img className={styles.imageIcon} alt="" src="/image.svg" />
+            <div className={styles.emailField}>
+              <div className={styles.label} />
+              <input
+                className={styles.background1}
+                placeholder="Last Name"
+                type="text"
+              />
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Email Address Field */}
       <div className={styles.background}>
         <div className={styles.input} />
         <img className={styles.imageIcon} alt="" src="/image.svg" />
@@ -12,10 +44,12 @@ const FormBackground = ({ className = "" }) => {
           <input
             className={styles.background1}
             placeholder="Email address"
-            type="text"
+            type="email"
           />
         </div>
       </div>
+
+      {/* Password Field */}
       <div className={styles.background2}>
         <div className={styles.input1}>
           <img className={styles.imageIcon1} alt="" src="/image-11@2x.png" />
@@ -23,27 +57,33 @@ const FormBackground = ({ className = "" }) => {
         <input
           className={styles.background3}
           placeholder="Password"
-          type="text"
+          type="password"
         />
         <div className={styles.label1} />
       </div>
+
+      {/* Continue or Create Account Button */}
       <button className={styles.button}>
-        <div className={styles.continue}>Continue</div>
+        <div className={styles.continue}>
+          {isSignUp ? "Create Account" : "Continue"}
+        </div>
       </button>
+
       <div className={styles.accountOptions}>
         <div className={styles.innerOptionsWrapper}>
           <div className={styles.innerOptions}>
             <div className={styles.accountQuestion}>
-              <div className={styles.dontHaveAn}>Don't have an account? </div>
+              {isSignUp ? (
+                <div className={styles.dontHaveAn}>Already have an account? </div>
+              ) : (
+                <div className={styles.dontHaveAn}>Don't have an account? </div>
+              )}
             </div>
             <div className={styles.link}>
-              <a
-                className={styles.createAccount}
-                href="https://id.realestate.com.au/u/signup/identifier"
-                target="_blank"
-              >
-                Create account
-              </a>
+              {/* Link Create account to SignUp.js page */}
+              <Link to={isSignUp ? "/signin" : "/signup"} className={styles.createAccount}>
+                {isSignUp ? "Sign in" : "Create account"}
+              </Link>
             </div>
           </div>
         </div>
@@ -53,6 +93,7 @@ const FormBackground = ({ className = "" }) => {
           <div className={styles.horizontalborder} />
         </div>
       </div>
+
       <div className={styles.container}>
         <div className={styles.formmargin}>
           <button className={styles.formButton}>
@@ -72,6 +113,7 @@ const FormBackground = ({ className = "" }) => {
 
 FormBackground.propTypes = {
   className: PropTypes.string,
+  isSignUp: PropTypes.bool, // Prop to differentiate between sign-up and sign-in
 };
 
 export default FormBackground;
