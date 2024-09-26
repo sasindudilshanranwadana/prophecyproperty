@@ -35,16 +35,7 @@ const Header = ({ className = "" }) => {
               <a className={styles.buy}>Buy</a>
             </div>
             <div className={styles.link2}>
-              <a className={styles.buy}>Rent</a>
-            </div>
-            <div className={styles.link3}>
-              <a className={styles.buy}>Sold</a>
-            </div>
-            <div className={styles.link4}>
-              <a className={styles.buy}>Find agents</a>
-            </div>
-            <div className={styles.link5}>
-              <a className={styles.buy}>News</a>
+              <a className={styles.buy}>Visualisations</a>
             </div>
           </nav>
         </nav>

@@ -18,6 +18,7 @@ import SearchReasultAddress from "./pages/SearchReasultAddress";
 import SearchReasultBuy from "./pages/SearchReasultBuy";
 import SearchReasultRent from "./pages/SearchReasultRent";
 import SearchReasultSold from "./pages/SearchReasultSold";
+import Visualisations from "./pages/Visualisations";  // Import the new Visualisations page
 
 function App() {
   const action = useNavigationType();
@@ -36,56 +37,64 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Home";
+        metaDescription = "Welcome to the home page.";
         break;
       case "/signin":
-        title = "";
-        metaDescription = "";
+        title = "Sign In";
+        metaDescription = "Sign in to your account.";
         break;
       case "/signup":
-        title = "";
-        metaDescription = "";
+        title = "Sign Up";
+        metaDescription = "Create a new account.";
         break;
       case "/news":
-        title = "";
-        metaDescription = "";
+        title = "News";
+        metaDescription = "Latest real estate news.";
         break;
       case "/agents":
-        title = "";
-        metaDescription = "";
+        title = "Agents";
+        metaDescription = "Find real estate agents.";
         break;
       case "/rent":
-        title = "";
-        metaDescription = "";
+        title = "Rent";
+        metaDescription = "Find properties for rent.";
         break;
       case "/address":
-        title = "";
-        metaDescription = "";
+        title = "Address Search";
+        metaDescription = "Search for properties by address.";
         break;
       case "/sold":
-        title = "";
-        metaDescription = "";
+        title = "Sold Properties";
+        metaDescription = "See sold properties.";
         break;
       case "/search-reasult-agents":
-        title = "";
-        metaDescription = "";
+        title = "Agent Search Results";
+        metaDescription = "Find agents based on your search.";
         break;
       case "/search-reasult-address":
-        title = "";
-        metaDescription = "";
+        title = "Address Search Results";
+        metaDescription = "Find properties by address.";
         break;
       case "/search-reasult-buy":
-        title = "";
-        metaDescription = "";
+        title = "Buy Search Results";
+        metaDescription = "Find properties to buy.";
         break;
       case "/search-reasult-rent":
-        title = "";
-        metaDescription = "";
+        title = "Rent Search Results";
+        metaDescription = "Find rental properties.";
         break;
       case "/search-reasult-sold":
-        title = "";
-        metaDescription = "";
+        title = "Sold Search Results";
+        metaDescription = "See results for sold properties.";
+        break;
+      case "/visualisations":   // Add meta info for the new Visualisations page
+        title = "Data Visualisations";
+        metaDescription = "Explore data visualisations.";
+        break;
+      default:
+        title = "Real Estate";
+        metaDescription = "Your go-to real estate platform.";
         break;
     }
 
@@ -114,14 +123,13 @@ function App() {
       <Route path="/address" element={<Address />} />
       <Route path="/sold" element={<Sold />} />
       <Route path="/search-reasult-agents" element={<SearchReasultAgents />} />
-      <Route
-        path="/search-reasult-address"
-        element={<SearchReasultAddress />}
-      />
+      <Route path="/search-reasult-address" element={<SearchReasultAddress />} />
       <Route path="/search-reasult-buy" element={<SearchReasultBuy />} />
       <Route path="/search-reasult-rent" element={<SearchReasultRent />} />
       <Route path="/search-reasult-sold" element={<SearchReasultSold />} />
+      <Route path="/visualisations" element={<Visualisations />} />  {/* Add route for Visualisations */}
     </Routes>
   );
 }
+
 export default App;

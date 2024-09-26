@@ -1,0 +1,41 @@
+.visualisations {
+    width: 100%;
+    position: relative;
+    background-color: var(--idrealestatecomau-white);
+    padding: 0 var(--padding-xl);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 var(--padding-xl) var(--padding-37xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .heroContent {
+    width: 1142px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-93xl);
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--wwwrealestatecomau-ship-gray);
+  }
+  
+  .footer {
+    align-self: stretch;
+    border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
+    padding: var(--padding-12xs-8) 0 0;
+    max-width: 100%;
+  }
+  
