@@ -1,41 +1,62 @@
 .visualisations {
-    width: 100%;
-    position: relative;
-    background-color: var(--idrealestatecomau-white);
-    padding: 0 var(--padding-xl);
-    line-height: normal;
-    letter-spacing: normal;
-  }
-  
-  .contentWrapper {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 var(--padding-xl) var(--padding-37xl);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  
-  .heroContent {
-    width: 1142px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-93xl);
-  }
-  
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--wwwrealestatecomau-ship-gray);
-  }
-  
-  .footer {
-    align-self: stretch;
-    border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
-    padding: var(--padding-12xs-8) 0 0;
-    max-width: 100%;
-  }
-  
+  width: 100%;
+  position: relative;
+  background-color: var(--idrealestatecomau-white);
+  padding: 0 var(--padding-xl);
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--padding-xl) var(--padding-37xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.innerWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-93xl);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--wwwrealestatecomau-ship-gray);
+}
+
+.visualisationSection {
+  width: 100%;
+  margin-bottom: 50px; /* Space between sections */
+}
+
+.visualisationSection h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.visualisationSection p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Ensure each chart takes full width and looks bigger */
+canvas {
+  width: 100% !important;
+  max-width: 800px;
+  height: 400px !important;
+}
+
+.footer {
+  align-self: stretch;
+  border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
+  padding: var(--padding-12xs-8) 0 0;
+  max-width: 100%;
+}

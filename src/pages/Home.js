@@ -39,15 +39,7 @@ const Home = () => {
                     <div className={styles.buyWrapper}>
                       <div className={styles.buy}>Buy</div>
                     </div>
-                    <div className={styles.horizontalDivider} />
-                    <div className={styles.rentWrapper}>
-                      <div className={styles.buy}>Rent</div>
-                    </div>
-                    <div className={styles.soldWrapper}>
-                      <div className={styles.buy}>Sold</div>
-                    </div>
-                    <div className={styles.address}>Address</div>
-                    <div className={styles.agents}>Agents</div>
+                  
                   </div>
                 </div>
                 <Container />

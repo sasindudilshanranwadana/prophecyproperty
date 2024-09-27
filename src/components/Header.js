@@ -32,10 +32,10 @@ const Header = ({ className = "" }) => {
         <nav className={styles.background}>
           <nav className={styles.nav}>
             <div className={styles.link1}>
-              <a className={styles.buy}>Buy</a>
+              <Link to="/" className={styles.buy}>Buy</Link> {/* Link to Home */}
             </div>
             <div className={styles.link2}>
-              <a className={styles.buy}>Visualisations</a>
+              <Link to="/visualisations" className={styles.buy}>Visualisations</Link> {/* Link to Visualisations */}
             </div>
           </nav>
         </nav>

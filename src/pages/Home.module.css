@@ -36,11 +36,12 @@
 .buyWrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;  /* Centers horizontally */
+  justify-content: center;  /* Centers vertically */
   padding: 0 var(--padding-4xl) 0 0;
   color: var(--wwwrealestatecomau-ship-gray);
 }
+
 .horizontalDivider {
   height: 2px;
   width: 144.8px;
@@ -81,8 +82,8 @@
   overflow-x: auto;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;  /* Vertically center content */
+  justify-content: center;  /* Horizontally center content */
   padding: var(--padding-xs) var(--padding-30xl) var(--padding-2xs)
     var(--padding-39xl);
   position: relative;
