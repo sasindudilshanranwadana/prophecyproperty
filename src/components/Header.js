@@ -37,6 +37,9 @@ const Header = ({ className = "" }) => {
             <div className={styles.link2}>
               <Link to="/visualisations" className={styles.buy}>Visualisations</Link> {/* Link to Visualisations */}
             </div>
+            <div className={styles.link2}>
+              <Link to="/ai-models" className={styles.buy}>AI Models</Link> {/* Link to AI Models */}
+            </div>
           </nav>
         </nav>
         <div className={styles.container1}>

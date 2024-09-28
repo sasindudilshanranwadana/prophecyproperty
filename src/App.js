@@ -18,7 +18,8 @@ import SearchReasultAddress from "./pages/SearchReasultAddress";
 import SearchReasultBuy from "./pages/SearchReasultBuy";
 import SearchReasultRent from "./pages/SearchReasultRent";
 import SearchReasultSold from "./pages/SearchReasultSold";
-import Visualisations from "./pages/Visualisations";  // Import the new Visualisations page
+import Visualisations from "./pages/Visualisations";  // Already present
+import AiModels from "./pages/AiModels";  // Import the new AiModels page
 
 function App() {
   const action = useNavigationType();
@@ -88,9 +89,13 @@ function App() {
         title = "Sold Search Results";
         metaDescription = "See results for sold properties.";
         break;
-      case "/visualisations":   // Add meta info for the new Visualisations page
+      case "/visualisations":
         title = "Data Visualisations";
         metaDescription = "Explore data visualisations.";
+        break;
+      case "/ai-models": // Add meta info for the new AI Models page
+        title = "AI Models";
+        metaDescription = "Explore AI models and results.";
         break;
       default:
         title = "Real Estate";
@@ -127,7 +132,8 @@ function App() {
       <Route path="/search-reasult-buy" element={<SearchReasultBuy />} />
       <Route path="/search-reasult-rent" element={<SearchReasultRent />} />
       <Route path="/search-reasult-sold" element={<SearchReasultSold />} />
-      <Route path="/visualisations" element={<Visualisations />} />  {/* Add route for Visualisations */}
+      <Route path="/visualisations" element={<Visualisations />} />
+      <Route path="/ai-models" element={<AiModels />} />  {/* Add route for AI Models */}
     </Routes>
   );
 }
