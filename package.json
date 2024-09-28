@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.0.11",
     "bootstrap": "^5.1.3",
     "chart.js": "^4.4.4",
+    "concurrently": "^9.0.1",
     "firebase": "^10.13.2",
     "papaparse": "^5.4.1",
     "prop-types": "^15.8.1",
@@ -23,7 +24,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run react-start\" \"npm run server\"",
+    "react-start": "set PORT=3001 && react-scripts start",
+    "server": "flask run --app server.py",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

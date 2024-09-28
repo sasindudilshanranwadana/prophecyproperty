@@ -18,8 +18,8 @@ import SearchReasultAddress from "./pages/SearchReasultAddress";
 import SearchReasultBuy from "./pages/SearchReasultBuy";
 import SearchReasultRent from "./pages/SearchReasultRent";
 import SearchReasultSold from "./pages/SearchReasultSold";
-import Visualisations from "./pages/Visualisations";  // Already present
-import AiModels from "./pages/AiModels";  // Import the new AiModels page
+import Visualisations from "./pages/Visualisations";  
+import AiModels from "./pages/AiModels";  // Imported AI Models page
 
 function App() {
   const action = useNavigationType();
@@ -93,7 +93,7 @@ function App() {
         title = "Data Visualisations";
         metaDescription = "Explore data visualisations.";
         break;
-      case "/ai-models": // Add meta info for the new AI Models page
+      case "/ai-models":  // AI Models page
         title = "AI Models";
         metaDescription = "Explore AI models and results.";
         break;
@@ -133,7 +133,7 @@ function App() {
       <Route path="/search-reasult-rent" element={<SearchReasultRent />} />
       <Route path="/search-reasult-sold" element={<SearchReasultSold />} />
       <Route path="/visualisations" element={<Visualisations />} />
-      <Route path="/ai-models" element={<AiModels />} />  {/* Add route for AI Models */}
+      <Route path="/ai-models" element={<AiModels />} />  {/* AI Models route */}
     </Routes>
   );
 }
