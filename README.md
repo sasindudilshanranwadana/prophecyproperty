@@ -77,3 +77,7 @@ The Flask API exposes a single endpoint for price prediction:
 - **Error Handling**: Implement better error handling for edge cases (e.g., non-numeric input).
 - **Styling**: Improve the UI design with better styles and layouts.
 - **Testing**: Add unit tests for the Flask backend and React components.
+
+
+
+
