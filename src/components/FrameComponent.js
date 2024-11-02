@@ -18,24 +18,6 @@ const FrameComponent = ({
           </div>
         </div>
         <div className={styles.container1}>
-          <button className={styles.buttonmargin}>
-            <div className={styles.button}>
-              <div className={styles.buying}>Buying</div>
-            </div>
-          </button>
-          <div className={styles.buttonmargin1}>
-            <div className={styles.button1}>
-              <div className={styles.renting}>Renting</div>
-            </div>
-          </div>
-          <button className={styles.buttonmargin}>
-            <div className={styles.button1}>
-              <div className={styles.selling}>Selling</div>
-            </div>
-          </button>
-          <button className={styles.button3}>
-            <div className={styles.buying}>Researching</div>
-          </button>
         </div>
         <div className={styles.tabpanel}>
           <div className={styles.margin}>

@@ -80,4 +80,98 @@ The Flask API exposes a single endpoint for price prediction:
 
 
 
+### 1. Data Preprocessing Code Snippet
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Load the dataset
+data = pd.read_csv('data.csv')
+
+# Separate the features and target variable
+X = data.drop('price', axis=1)  # Features (excluding 'price' column)
+y = data['price']  # Target variable
+
+# Split the dataset into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features (optional, depending on the model requirements)
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Check the preprocessed data
+print(X_train_scaled[:5])
+```
+
+### 2. Random Forest Regression Code Snippet
+
+```python
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Initialize the Random Forest Regressor
+rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+# Train the model
+rf_model.fit(X_train_scaled, y_train)
+
+# Make predictions on the test set
+y_pred = rf_model.predict(X_test_scaled)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"Mean Squared Error: {mse}")
+print(f"R-squared Score: {r2}")
+```
+
+### 3. Flask Web Application Code Snippet
+
+```python
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import numpy as np
+import pickle
+
+# Load the trained Random Forest model
+with open('random_forest_model.pkl', 'rb') as file:
+    rf_model = pickle.load(file)
+
+# Initialize Flask app
+app = Flask(__name__)
+CORS(app)  # Enable Cross-Origin Resource Sharing (CORS)
+
+# Define the API endpoint for prediction
+@app.route('/predict_price', methods=['POST'])
+def predict_price():
+    try:
+        # Get the request data
+        data = request.get_json()
+        building_area = float(data['buildingArea'])
+
+        # Preprocess the input data (apply same scaling as during training)
+        input_data = np.array([[building_area]])
+        # Assuming the scaler is saved during training
+        with open('scaler.pkl', 'rb') as scaler_file:
+            scaler = pickle.load(scaler_file)
+        input_data_scaled = scaler.transform(input_data)
+
+        # Make prediction using the Random Forest model
+        predicted_price = rf_model.predict(input_data_scaled)[0]
+
+        # Return the predicted price
+        return jsonify({'predicted_price': predicted_price})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
+
+# Run the Flask app
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
 

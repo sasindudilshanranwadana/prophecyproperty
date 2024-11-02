@@ -11,9 +11,11 @@ import BrokersSet from "../components/BrokersSet";
 import BackgroundShadow from "../components/BackgroundShadow";
 import Itemmargin from "../components/Itemmargin";
 import Itemmargin1 from "../components/Itemmargin1";
-import Section from "../components/Section";
 import Footer from "../components/Footer";
 import styles from "./Home.module.css";
+import { auth } from "../firebaseConfig";
+
+
 
 const Home = () => {
   return (
@@ -39,7 +41,6 @@ const Home = () => {
                     <div className={styles.buyWrapper}>
                       <div className={styles.buy}>Buy</div>
                     </div>
-                  
                   </div>
                 </div>
                 <Container />
@@ -286,7 +287,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Section />
         </section>
       </main>
       <Footer />

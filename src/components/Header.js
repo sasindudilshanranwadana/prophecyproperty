@@ -1,24 +1,31 @@
+// Header.js
 import PropTypes from "prop-types";
-import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate for navigation
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { auth } from "../firebaseConfig";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import styles from "./Header.module.css";
-import userIcon from "../user-50.png"; // Import user icon
 
 const Header = ({ className = "" }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track user login
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Check login status from localStorage or other auth mechanism
+  // Monitor auth state
   useEffect(() => {
-    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
-    setIsLoggedIn(loggedIn);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLoggedIn(!!user); // Set isLoggedIn based on user state
+    });
+    return unsubscribe;
   }, []);
 
-  const handleLogout = () => {
-    // Log the user out and redirect
-    localStorage.removeItem("isLoggedIn");
-    setIsLoggedIn(false);
-    navigate("/");
+  const handleLogout = async () => {
+    try {
+      await signOut(auth); // Sign out from Firebase
+      setIsLoggedIn(false);
+      navigate("/");
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
   };
 
   return (
@@ -32,54 +39,34 @@ const Header = ({ className = "" }) => {
         <nav className={styles.background}>
           <nav className={styles.nav}>
             <div className={styles.link1}>
-              <Link to="/" className={styles.buy}>Buy</Link> {/* Link to Home */}
+              <Link to="/" className={styles.buy}>Buy</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/visualisations" className={styles.buy}>Visualisations</Link> {/* Link to Visualisations */}
+              <Link to="/visualisations" className={styles.buy}>Visualisations</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/ai-models" className={styles.buy}>AI Models</Link> {/* Link to AI Models */}
+              <Link to="/ai-models" className={styles.buy}>AI Models</Link>
             </div>
           </nav>
         </nav>
         <div className={styles.container1}>
           <div className={styles.container2}>
-            <div className={styles.container3}>
-              {isLoggedIn ? (
-                // User Icon redirects to dashboard
-                <div className={styles.userIconContainer}>
-                  <Link to="/dashboard" className={styles.userIcon}>
-                    <img
-                      src={userIcon}
-                      alt="User Dashboard"
-                      className={styles.userIconImage}
-                    />
-                  </Link>
-                </div>
-              ) : (
-                // "Sign in" button if user is not logged in
+            {isLoggedIn ? (
+              <button className={[styles.button1, styles.join].join(" ")} onClick={handleLogout}>
+                Logout
+              </button>
+            ) : (
+              <>
                 <div className={styles.button}>
-                  <Link to="/signin" className={styles.signIn}>
-                    Sign in
-                  </Link>
+                  <Link to="/signin" className={styles.signIn}>Sign in</Link>
                 </div>
-              )}
-            </div>
-            <div className={styles.buttonmargin}>
-              {isLoggedIn ? (
-                // "Logout" button if user is logged in
-                <button className={styles.button1} onClick={handleLogout}>
-                  Logout
-                </button>
-              ) : (
-                // "Join" button if user is not logged in
-                <button className={styles.button1}>
-                  <Link to="/signup" className={styles.join}>
-                    Join
-                  </Link>
-                </button>
-              )}
-            </div>
+                <div className={styles.buttonmargin}>
+                  <button className={styles.button1}>
+                    <Link to="/signup" className={styles.join}>Join</Link>
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </nav>
