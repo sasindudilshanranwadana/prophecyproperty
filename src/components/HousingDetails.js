@@ -1,68 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebaseConfig"; // Import your Firestore configuration
 import styles from "./HousingDetails.module.css";
-
-// Function to get a random sample of n items from an array
-function getRandomSample(arr, n) {
-  const result = [];
-  const taken = new Array(arr.length);
-  while (result.length < n) {
-    const x = Math.floor(Math.random() * arr.length);
-    if (!taken[x]) {
-      result.push(arr[x]);
-      taken[x] = true;
-    }
-  }
-  return result;
-}
 
 const HousingDetails = () => {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchHousingDetails = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const querySnapshot = await getDocs(collection(db, "properties"));
+      const allProperties = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      // Fetch the first 5 properties
+      const firstFiveProperties = allProperties.slice(0, 5);
+      setProperties(firstFiveProperties);
+      console.log("Fetched properties:", firstFiveProperties); // Debugging output
+
+    } catch (err) {
+      console.error("Error fetching housing details:", err);
+      setError("Failed to load housing listings.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchHousingDetails = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "housingData"));
-        const allProperties = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        
-        // Select 5 random properties from all available documents
-        const randomProperties = getRandomSample(allProperties, 5);
-        setProperties(randomProperties);
-      } catch (error) {
-        console.error("Error fetching housing details from Firestore:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchHousingDetails();
-  }, []); // Fetch only once on component mount
+  }, []);
 
   return (
     <div className={styles.housingContainer}>
-      <h3 className={styles.housingHeader}>Featured Housing Listings</h3>
       {loading ? (
-        <p>Loading...</p>
+        <p>Loading housing listings...</p>
+      ) : error ? (
+        <p className={styles.error}>{error}</p>
       ) : (
         <div className={styles.housingList}>
-          {properties.map((property) => (
+          {properties.map(property => (
             <div key={property.id} className={styles.housingItem}>
               <img
-                src={`https://maps.googleapis.com/maps/api/streetview?size=400x300&location=${property.latitude},${property.longitude}&fov=80&heading=70&pitch=0&key=YOUR_GOOGLE_MAPS_API_KEY`}
-                alt={`Street view of ${property.address}`}
+                src={property["Image URL"]} // Use the image URL from Firestore
+                alt={`Street view of ${property.Address}`}
                 className={styles.housingImage}
+                onError={(e) => {
+                  e.target.src = "/placeholder-image.jpg"; // Fallback image if loading fails
+                }}
               />
               <div className={styles.housingDetails}>
-                <h4 className={styles.housingAddress}>{property.address}</h4>
-                <p className={styles.housingPrice}>{property.price}</p>
+                <h4 className={styles.housingAddress}>{property.Address}</h4>
                 <p className={styles.housingInfo}>
-                  {property.bedrooms} beds • {property.bathrooms} baths
+                  {property.Bedrooms} beds • {property.Bathrooms} baths
                 </p>
+                <p className={styles.housingPrice}>Price: {property.Price}</p>
               </div>
             </div>
           ))}

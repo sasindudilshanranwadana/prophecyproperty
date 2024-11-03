@@ -4,20 +4,26 @@
 
 .housingHeader {
   font-size: 24px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .housingList {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
 }
 
 .housingItem {
-  flex: 0 0 200px;
+  width: 200px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.housingItem:hover {
+  transform: scale(1.05);
 }
 
 .housingImage {
@@ -31,18 +37,16 @@
 }
 
 .housingAddress {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-.housingDescription {
+.housingPrice, .housingInfo {
   font-size: 14px;
   color: #555;
-  margin-bottom: 10px;
 }
 
-.housingInfo {
-  font-size: 14px;
-  color: #888;
+.error {
+  color: red;
+  font-weight: bold;
 }
