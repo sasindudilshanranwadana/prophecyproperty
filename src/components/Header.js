@@ -10,21 +10,20 @@ const Header = ({ className = "" }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Monitor auth state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsLoggedIn(!!user); // Set isLoggedIn based on user state
+      setIsLoggedIn(!!user);
     });
     return unsubscribe;
   }, []);
 
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Sign out from Firebase
+      await signOut(auth);
       setIsLoggedIn(false);
-      navigate("/");
+      navigate("/signin");
     } catch (error) {
-      console.error("Logout failed", error);
+      console.error("Sign out failed", error);
     }
   };
 
@@ -33,7 +32,9 @@ const Header = ({ className = "" }) => {
       <nav className={styles.container}>
         <div className={styles.linkmargin}>
           <div className={styles.link}>
-            <a className={styles.prophecyproperty}>ProphecyProperty</a>
+            <Link to="/" className={styles.prophecyproperty}> {/* Make title clickable */}
+              ProphecyProperty
+            </Link>
           </div>
         </div>
         <nav className={styles.background}>
@@ -52,9 +53,14 @@ const Header = ({ className = "" }) => {
         <div className={styles.container1}>
           <div className={styles.container2}>
             {isLoggedIn ? (
-              <button className={[styles.button1, styles.join].join(" ")} onClick={handleLogout}>
-                Logout
-              </button>
+              <div className={styles.logoutContainer}>
+                <Link to="/profile">
+                  <img src="/usericon.png" alt="User Icon" className={styles.userIcon} />
+                </Link>
+                <button className={styles.button1} onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
             ) : (
               <>
                 <div className={styles.button}>

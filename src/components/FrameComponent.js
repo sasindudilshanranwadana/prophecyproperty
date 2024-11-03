@@ -13,13 +13,13 @@ const FrameComponent = ({
         <div className={styles.container}>
           <div className={styles.heading2}>
             <div className={styles.exploreAllThings}>
-              Explore all things property
+              Explore Real Estate in Victoria
             </div>
           </div>
         </div>
-        <div className={styles.container1}>
-        </div>
+        <div className={styles.container1}></div>
         <div className={styles.tabpanel}>
+          {/* Property Estimation Section */}
           <div className={styles.margin}>
             <div className={styles.backgroundborder}>
               <div className={styles.article}>
@@ -29,10 +29,10 @@ const FrameComponent = ({
                       <div className={styles.getEstimatedPropertyContainer}>
                         <span>
                           <p className={styles.getEstimatedProperty}>
-                            Get estimated property prices with a
+                            Get Estimated Property Values
                           </p>
                           <p className={styles.getEstimatedProperty}>
-                            realEstimate™
+                            for homes in Victoria.
                           </p>
                         </span>
                       </div>
@@ -42,22 +42,13 @@ const FrameComponent = ({
                     <div className={styles.container3}>
                       <div className={styles.seeHowMuchContainer}>
                         <p className={styles.getEstimatedProperty}>
-                          See how much your property's worth
-                        </p>
-                        <p className={styles.getEstimatedProperty}>
-                          whether you own it or want to buy it.
+                        See the current value of your property.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className={styles.link}>
-                    <a
-                      className={styles.checkPropertyValues}
-                      href="https://www.realestate.com.au/property/"
-                      target="_blank"
-                    >
-                      Check property values
-                    </a>
+                   
                   </div>
                 </div>
                 <div className={styles.link1}>
@@ -65,7 +56,7 @@ const FrameComponent = ({
                     <img
                       className={styles.trackProperty95bbe33df44d4c2Icon}
                       loading="lazy"
-                      alt=""
+                      alt="Property Valuation Tool"
                       src={trackPropertybbedfdcfd}
                     />
                   </div>
@@ -73,6 +64,8 @@ const FrameComponent = ({
               </div>
             </div>
           </div>
+
+          {/* Mortgage Assistance Section */}
           <div className={styles.margin}>
             <div className={styles.backgroundborder}>
               <div className={styles.article}>
@@ -80,7 +73,7 @@ const FrameComponent = ({
                   <div className={styles.heading3margin}>
                     <div className={styles.container2}>
                       <div className={styles.needHelpWith}>
-                        Need help with a mortgage?
+                        Find the Right Mortgage
                       </div>
                     </div>
                   </div>
@@ -89,23 +82,14 @@ const FrameComponent = ({
                       <div className={styles.compareYourFinanceContainer}>
                         <span>
                           <p className={styles.getEstimatedProperty}>
-                            Compare your finance options to make an
+                            Explore mortgage options tailored 
                           </p>
                           <p className={styles.getEstimatedProperty}>
-                            informed call.
+                            to the Victorian market. 
                           </p>
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div className={styles.link2}>
-                    <a
-                      className={styles.checkPropertyValues}
-                      href="https://www.realestate.com.au/home-loans/"
-                      target="_blank"
-                    >
-                      Explore home loans
-                    </a>
                   </div>
                 </div>
                 <div className={styles.link1}>
@@ -113,7 +97,7 @@ const FrameComponent = ({
                     <img
                       className={styles.trackProperty95bbe33df44d4c2Icon}
                       loading="lazy"
-                      alt=""
+                      alt="Mortgage Help"
                       src={homeloanbbbbfcfbbbavif}
                     />
                   </div>
@@ -121,13 +105,15 @@ const FrameComponent = ({
               </div>
             </div>
           </div>
+
+          {/* Suburb Profiles Section */}
           <div className={styles.backgroundborder2}>
             <div className={styles.article}>
               <div className={styles.container4}>
                 <div className={styles.heading3margin}>
                   <div className={styles.container2}>
                     <div className={styles.exploreSuburbProfiles}>
-                      Explore suburb profiles
+                      Explore Suburb Profiles
                     </div>
                   </div>
                 </div>
@@ -135,22 +121,10 @@ const FrameComponent = ({
                   <div className={styles.container3}>
                     <div className={styles.checkOutDifferentContainer}>
                       <p className={styles.getEstimatedProperty}>
-                        Check out different suburb profiles and find
-                      </p>
-                      <p className={styles.getEstimatedProperty}>
-                        one that’s right for you.
+                        Discover the unique characteristics of suburbs across Victoria.
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className={styles.link}>
-                  <a
-                    className={styles.checkPropertyValues}
-                    href="https://www.realestate.com.au/australia/"
-                    target="_blank"
-                  >
-                    Research suburbs
-                  </a>
                 </div>
               </div>
               <div className={styles.link1}>
@@ -158,7 +132,7 @@ const FrameComponent = ({
                   <img
                     className={styles.trackProperty95bbe33df44d4c2Icon}
                     loading="lazy"
-                    alt=""
+                    alt="Suburb Profiles"
                     src={explorebcebfcbcddcavif}
                   />
                 </div>

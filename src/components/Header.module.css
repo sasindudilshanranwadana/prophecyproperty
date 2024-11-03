@@ -5,6 +5,7 @@
   font-weight: 700;
   color: inherit;
 }
+
 .link,
 .linkmargin {
   display: flex;
@@ -15,12 +16,14 @@
   box-sizing: border-box;
   max-width: 210px;
 }
+
 .linkmargin {
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 var(--padding-13xl) 0 var(--padding-5xs);
   max-width: 250px;
 }
+
 .buy {
   text-decoration: none;
   position: relative;
@@ -28,6 +31,7 @@
   font-weight: 500;
   color: inherit;
 }
+
 .link1,
 .link2,
 .link3,
@@ -38,40 +42,45 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-xs) var(--padding-xs) var(--padding-xs)
-    var(--padding-5xs);
+  padding: var(--padding-xs) var(--padding-xs) var(--padding-xs) var(--padding-5xs);
   box-sizing: border-box;
   min-width: 48px;
   min-height: 48px;
 }
+
 .link2,
 .link3,
 .link4,
 .link5 {
-  padding: var(--padding-xs) var(--padding-6xs) var(--padding-xs)
-    var(--padding-5xs);
+  padding: var(--padding-xs) var(--padding-6xs) var(--padding-xs) var(--padding-5xs);
 }
+
 .link2 {
   z-index: 1;
 }
+
 .link3,
 .link4,
 .link5 {
   font-size: var(--wwwrealestatecomau-inter-regular-1538-size);
 }
+
 .link4,
 .link5 {
   font-size: var(--wwwrealestatecomau-inter-regular-1463-size);
 }
+
 .link5 {
   font-size: var(--wwwrealestatecomau-inter-medium-1475-size);
 }
+
 .background,
 .nav {
   margin: 0;
   display: flex;
   align-items: flex-start;
 }
+
 .nav {
   overflow: auto;
   flex-direction: row;
@@ -82,12 +91,14 @@
   color: var(--wwwrealestatecomau-ship-gray);
   font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
 }
+
 .background {
   background-color: var(--idrealestatecomau-white);
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
 }
+
 .signIn {
   text-decoration: none;
   position: relative;
@@ -96,6 +107,7 @@
   font-weight: 500;
   color: inherit;
 }
+
 .button {
   border-radius: var(--br-5xs);
   display: flex;
@@ -107,12 +119,14 @@
   min-width: 32px;
   min-height: 32px;
 }
+
 .container3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .join {
   text-decoration: none;
   position: relative;
@@ -124,28 +138,33 @@
   color: var(--idrealestatecomau-white);
   text-align: center;
 }
+
 .button1 {
   cursor: pointer;
   border: 0;
-  padding: var(--padding-5xs) var(--padding-4xl) var(--padding-5xs)
-    var(--padding-5xl);
+  padding: var(--padding-5xs) var(--padding-4xl) var(--padding-5xs) var(--padding-5xl);
   background-color: var(--wwwrealestatecomau-blue);
+  color: var(--idrealestatecomau-white); /* Ensure text color is white */
   border-radius: var(--br-5xs);
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   min-width: 32px;
   min-height: 32px;
+  text-decoration: none;
 }
+
 .button1:hover {
   background-color: var(--color-mediumblue);
 }
+
 .button1,
 .buttonmargin,
 .container2 {
   display: flex;
   justify-content: flex-start;
 }
+
 .buttonmargin {
   flex-direction: column;
   align-items: flex-start;
@@ -154,17 +173,32 @@
   min-width: 48px;
   min-height: 32px;
 }
+
 .container2 {
   flex-direction: row;
   align-items: center;
   padding: 0 var(--padding-5xs) 0 0;
 }
+
+.logoutContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  width: 24px; /* Adjust icon size as needed */
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px; /* Adds a gap between icon and Logout button */
+}
+
 .container,
 .container1,
 .header {
   display: flex;
   box-sizing: border-box;
 }
+
 .container1 {
   flex-direction: row;
   align-items: flex-start;
@@ -174,10 +208,12 @@
   font-size: var(--wwwrealestatecomau-inter-medium-145-size);
   color: var(--wwwrealestatecomau-ship-gray);
 }
+
 .container,
 .header {
   align-items: center;
 }
+
 .container {
   margin: 0;
   width: 100%;
@@ -192,6 +228,7 @@
   color: var(--wwwrealestatecomau-black);
   font-family: var(--wwwrealestatecomau-inter-regular-1563-underline);
 }
+
 .header {
   align-self: stretch;
   background-color: var(--idrealestatecomau-white);
@@ -200,16 +237,19 @@
   padding: 0 var(--padding-xl);
   max-width: 100%;
 }
+
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 100%;
   }
 }
+
 @media screen and (max-width: 1050px) {
   .container {
     flex-wrap: wrap;
   }
 }
+
 @media screen and (max-width: 450px) {
   .nav {
     padding-right: var(--padding-xl);

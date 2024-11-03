@@ -1,0 +1,53 @@
+.newsContainer {
+  padding: 20px;
+}
+
+.newsHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.newsList {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.newsItem {
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.newsItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.newsImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.newsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 10px 5px;
+  line-height: 1.2;
+}
+
+.newsDescription {
+  font-size: 14px;
+  color: #555;
+  margin: 0 10px 10px;
+}
+
+.newsSource {
+  font-size: 12px;
+  color: #888;
+  margin: 0 10px 10px;
+}
