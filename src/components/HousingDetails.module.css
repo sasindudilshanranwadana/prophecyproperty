@@ -10,11 +10,12 @@
 
 .housingList {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  overflow-x: auto;
 }
 
 .housingItem {
-  width: 200px;
+  width: 270px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -28,21 +29,21 @@
 
 .housingImage {
   width: 100%;
-  height: 150px;
+  height: 100px;
   object-fit: cover;
 }
 
 .housingDetails {
-  padding: 10px;
+  padding: 8px;
 }
 
 .housingAddress {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 
-.housingPrice, .housingInfo {
-  font-size: 14px;
+.housingInfo, .housingPrice {
+  font-size: 12px;
   color: #555;
 }
 
