@@ -1,27 +1,23 @@
 .housingContainer {
-  margin-top: 20px;
+  padding: 20px;
 }
 
 .housingHeader {
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .housingList {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding-bottom: 10px;
 }
 
 .housingItem {
-  min-width: 250px;
-  max-width: 250px;
-  border: 1px solid #ddd;
+  flex: 0 0 200px;
   border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .housingImage {
@@ -37,15 +33,16 @@
 .housingAddress {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
-.housingPrice {
-  color: #666;
-  margin: 8px 0;
+.housingDescription {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
 .housingInfo {
-  color: #888;
   font-size: 14px;
+  color: #888;
 }
