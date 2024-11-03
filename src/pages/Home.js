@@ -1,18 +1,9 @@
 import Header from "../components/Header";
 import Container from "../components/Container";
 import FrameComponent from "../components/FrameComponent";
-import BrokerSeparator from "../components/BrokerSeparator";
-import Margin from "../components/Margin";
-import BrokerDetails from "../components/BrokerDetails";
-import BrokerCards from "../components/BrokerCards";
-import BrokerItems from "../components/BrokerItems";
-import BrokerItems1 from "../components/BrokerItems1";
-import BrokersSet from "../components/BrokersSet";
-import BackgroundShadow from "../components/BackgroundShadow";
-import Itemmargin from "../components/Itemmargin";
-import Itemmargin1 from "../components/Itemmargin1";
-import Footer from "../components/Footer";
 import News from "../components/news"; // Import News component
+import HousingDetails from "../components/HousingDetails"; // Import HousingDetails component
+import Footer from "../components/Footer";
 import styles from "./Home.module.css";
 import { auth } from "../firebaseConfig";
 
@@ -61,29 +52,12 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Remaining elements like broker details */}
+            {/* Housing details section */}
             <div className={styles.section1}>
               <div className={styles.latestPropertyNews}>
-                Local mortgage brokers
+                Featured Housing Listings
               </div>
-              <div className={styles.list1}>
-                <div className={styles.brokerCards}>
-                  <div className={styles.backgroundshadow}>
-                    <Margin image="/image@2x.png" />
-                    <BrokerDetails />
-                  </div>
-                </div>
-                <BrokerCards image="/image-1.svg" />
-                <BrokerItems image="/image-1.svg" />
-                <BrokerItems1 image="/image-1.svg" />
-                <BrokersSet image="/image-1.svg" />
-                <BackgroundShadow image="/image-1.svg" />
-                <Itemmargin />
-                <Itemmargin1 image="/image-7@2x.png" />
-              </div>
-              <div className={styles.buttonScrollRight1}>
-                <img className={styles.svgIcon} alt="" src="/svg-2.svg" />
-              </div>
+              <HousingDetails /> {/* Dynamic housing details */}
             </div>
           </div>
         </section>

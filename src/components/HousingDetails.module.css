@@ -1,0 +1,51 @@
+.housingContainer {
+  margin-top: 20px;
+}
+
+.housingHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.housingList {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.housingItem {
+  min-width: 250px;
+  max-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.housingImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.housingDetails {
+  padding: 10px;
+}
+
+.housingAddress {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.housingPrice {
+  color: #666;
+  margin: 8px 0;
+}
+
+.housingInfo {
+  color: #888;
+  font-size: 14px;
+}
