@@ -1,61 +1,54 @@
-import MainContent from "../components/MainContent";
-import Section1 from "../components/Section1";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "./News.module.css";
 
+const API_KEY = "11366e547c60447ab9a720caa489b6f3"; // Replace with your actual API key
+
 const News = () => {
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        // Replace with your actual news API endpoint
+        const response = await axios.get(
+          `https://newsapi.org/v2/everything?q=real%20estate%20Victoria%20Australia&apiKey=${API_KEY}`
+        );
+
+        setNews(response.data.articles.slice(0, 5)); // Limit to first 5 news items
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching news:", err);
+        setError("Failed to load news. Please try again later.");
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  if (loading) return <p>Loading news...</p>;
+  if (error) return <p>{error}</p>;
+
   return (
-    <div className={styles.news}>
-      <MainContent />
-      <Section1
-        gettyImagesde="/gettyimages1324121174-920081d10e4jpg@2x.png"
-        cuddlepiePlaceFaulconbridge="/7cuddlepieplacefaulconbridgenswjpg@2x.png"
-        anArtistImpressionOfTheLakes="/anartistimpressionofthelakesatfutureappin1-94102742fe5jpeg@2x.png"
-        capicfbfefaafdda="/capi-3c1f6b8134578fef0aa194fdd5480a6d-741f43aeab431043b58d700ebdc99855jpeg@2x.png"
-        gettyImages1017418702jpg="/gettyimages1017418702jpg@2x.png"
-      />
-      <Section1
-        gettyImagesde="/gettyimages1324121174-920081d10e4jpg@2x.png"
-        cuddlepiePlaceFaulconbridge="/7cuddlepieplacefaulconbridgenswjpg@2x.png"
-        anArtistImpressionOfTheLakes="/anartistimpressionofthelakesatfutureappin1-94102742fe5jpeg@2x.png"
-        capicfbfefaafdda="/capi-3c1f6b8134578fef0aa194fdd5480a6d-741f43aeab431043b58d700ebdc99855jpeg@2x.png"
-        gettyImages1017418702jpg="/gettyimages1017418702jpg@2x.png"
-      />
-      <section className={styles.footer}>
-        <footer className={styles.background}>
-          <div className={styles.container}>
-            <div className={styles.container1}>
-              <div className={styles.linkFacebook}>
-                <img
-                  className={styles.svgIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/svg-4.svg"
-                />
-              </div>
-              <div className={styles.linkTwittermargin}>
-                <div className={styles.linkFacebook}>
-                  <img className={styles.svgIcon} alt="" src="/svg-5.svg" />
-                </div>
-              </div>
-              <div className={styles.linkTwittermargin}>
-                <div className={styles.linkFacebook}>
-                  <img className={styles.svgIcon} alt="" src="/svg-6.svg" />
-                </div>
-              </div>
-              <div className={styles.linkTwittermargin}>
-                <div className={styles.linkFacebook}>
-                  <img className={styles.svgIcon} alt="" src="/svg-7.svg" />
-                </div>
-              </div>
-              <div className={styles.linkTwittermargin}>
-                <div className={styles.linkFacebook}>
-                  <img className={styles.svgIcon} alt="" src="/svg-8.svg" />
-                </div>
-              </div>
+    <div className={styles.newsContainer}>
+      <h3 className={styles.newsHeader}>Latest Property News</h3>
+      <div className={styles.newsList}>
+        {news.map((article, index) => (
+          <div key={index} className={styles.newsItem}>
+            <img src={article.urlToImage || "https://via.placeholder.com/150"} alt={article.title} className={styles.newsImage} />
+            <div className={styles.newsDetails}>
+              <h4 className={styles.newsTitle}>{article.title}</h4>
+              <p className={styles.newsDescription}>{article.description}</p>
+              <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.newsLink}>
+                Read more
+              </a>
             </div>
           </div>
-        </footer>
-      </section>
+        ))}
+      </div>
     </div>
   );
 };
