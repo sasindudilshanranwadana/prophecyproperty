@@ -1,84 +1,62 @@
-.svgIcon {
-  width: 24px;
-  height: 24px;
-  position: relative;
-}
-.linkFacebook,
-.linkTwittermargin {
+.newsContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-10xs-4) 0 0;
-}
-.linkTwittermargin {
-  padding: 0 0 0 var(--padding-base);
-  margin-left: -0.5px;
-}
-.container,
-.container1 {
-  width: 1126px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.newsHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.newsList {
+  display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  padding: var(--padding-mini-8) var(--padding-xl);
-  box-sizing: border-box;
-  max-width: 100%;
+  gap: 20px;
+  justify-content: center;
 }
-.container {
-  width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: flex-start;
-  padding: var(--padding-xs) 0 var(--padding-xs) var(--padding-xs);
-  max-width: 1126px;
-  gap: var(--gap-xl);
-}
-.background,
-.footer,
-.news {
+
+.newsItem {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
-.background {
-  align-self: stretch;
-  background-color: var(--idrealestatecomau-white);
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--padding-xl);
-  max-width: 100%;
-}
-.footer,
-.news {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.footer {
-  align-self: stretch;
-  border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
-  padding: var(--padding-12xs-8) 0 0;
-  max-width: 100%;
-}
-.news {
+
+.newsImage {
   width: 100%;
-  position: relative;
-  background-color: var(--idrealestatecomau-white);
-  padding: 0 0 var(--padding-7xs-2);
-  gap: 79.2px;
-  line-height: normal;
-  letter-spacing: normal;
+  height: 150px;
+  object-fit: cover;
 }
-@media screen and (max-width: 1125px) {
-  .container {
-    max-width: 100%;
-  }
+
+.newsDetails {
+  padding: 15px;
 }
-@media screen and (max-width: 750px) {
-  .news {
-    gap: var(--gap-xl);
-  }
+
+.newsTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.newsDescription {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.newsLink {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.newsLink:hover {
+  text-decoration: underline;
 }

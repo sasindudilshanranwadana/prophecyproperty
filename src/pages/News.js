@@ -12,7 +12,6 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        // Replace with your actual news API endpoint
         const response = await axios.get(
           `https://newsapi.org/v2/everything?q=real%20estate%20Victoria%20Australia&apiKey=${API_KEY}`
         );
