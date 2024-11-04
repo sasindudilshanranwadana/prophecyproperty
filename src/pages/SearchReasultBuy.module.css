@@ -1,82 +1,61 @@
-.container {
+.propertyPage {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.propertyDetails {
+
+  
   padding: 20px;
   max-width: 800px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  width: 100%;
 }
 
-h2 {
-  font-size: 2em;
+.propertyTitle {
+  font-size: 24px;
   margin-bottom: 10px;
-}
-
-.mainContent {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.imageSection {
-  flex: 1;
+  text-align: center;
 }
 
 .propertyImage {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  max-height: 400px;
   object-fit: cover;
-}
-
-.detailsSection {
-  flex: 2;
-}
-
-.title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-size: 1em;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.features {
-  font-size: 0.9em;
-  color: #555;
-  display: flex;
-  gap: 15px;
-}
-
-.additionalInfo {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 10px;
-}
-
-.contactSection {
-  background: #f9f9f9;
-  padding: 15px;
   border-radius: 8px;
 }
 
-.contactSection h4 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+.propertyInfo {
+  margin-top: 15px;
 }
 
-.contactSection p {
-  font-size: 0.9em;
-  margin: 5px 0;
+.propertyInfo p {
+  font-size: 18px;
+  margin: 8px 0;
 }
 
-.agency {
-  font-weight: bold;
+.noProperty {
+  text-align: center;
+  padding: 50px;
+}
+
+.noProperty p {
+  font-size: 20px;
+}
+
+.noProperty button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.noProperty button:hover {
+  background-color: #0056b3;
 }

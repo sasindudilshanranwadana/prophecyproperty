@@ -10,6 +10,7 @@ const Container = ({ className = "" }) => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  // Debounce function to control search frequency
   const debounce = (func, delay) => {
     let debounceTimer;
     return function (...args) {
@@ -18,6 +19,7 @@ const Container = ({ className = "" }) => {
     };
   };
 
+  // Fetch data from properties.json with debounced filtering
   const fetchSuggestionsFromJSON = useCallback(
     debounce(async (inputQuery) => {
       if (inputQuery.length > 1) {
@@ -29,9 +31,10 @@ const Container = ({ className = "" }) => {
         try {
           const response = await fetch("/properties.json");
           const data = await response.json();
+
           const filteredProperties = data.filter((property) =>
             property.Address.toLowerCase().includes(lowercaseQuery)
-          ).slice(0, 10);
+          ).slice(0, 10); // Limit results to first 10 matches
 
           setSuggestions(filteredProperties);
         } catch (err) {
@@ -46,12 +49,14 @@ const Container = ({ className = "" }) => {
     }, 300), []
   );
 
+  // Update suggestions on query change
   const handleQueryChange = (e) => {
     const inputQuery = e.target.value;
     setQueryText(inputQuery);
     fetchSuggestionsFromJSON(inputQuery);
   };
 
+  // Navigate to SearchReasultBuy page with selected property data
   const handleSuggestionClick = (property) => {
     navigate("/search-reasult-buy", { state: { property } });
   };
@@ -68,6 +73,7 @@ const Container = ({ className = "" }) => {
         />
       </div>
 
+      {/* Display suggestions list */}
       {suggestions.length > 0 && (
         <ul className={styles.suggestionsList}>
           {suggestions.map((property, index) => (
