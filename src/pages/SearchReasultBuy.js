@@ -1,78 +1,45 @@
-import Header from "../components/Header";
-import BackgroundShadow1 from "../components/BackgroundShadow1";
-import Container1 from "../components/Container1";
+import React from "react";
+import { useLocation } from "react-router-dom";
+import Header from "../components/Header"; // Import Header
+import Footer from "../components/Footer"; // Import Footer
 import styles from "./SearchReasultBuy.module.css";
 
 const SearchReasultBuy = () => {
+  const location = useLocation();
+  const property = location.state?.property;
+
+  if (!property) {
+    return (
+      <div className={styles.container}>
+        <Header /> {/* Display header */}
+        <div className={styles.content}>
+          <p>No property selected.</p>
+        </div>
+        <Footer /> {/* Display footer */}
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.searchReasultBuy}>
-      <Header />
-      <BackgroundShadow1 />
-      <main className={styles.footerParent}>
-        <section className={styles.footer}>
-          <footer className={styles.background}>
-            <div className={styles.container}>
-              <div className={styles.container1}>
-                <div className={styles.linkFacebook}>
-                  <img
-                    className={styles.svgIcon}
-                    loading="lazy"
-                    alt=""
-                    src="/svg-4.svg"
-                  />
-                </div>
-                <div className={styles.linkTwittermargin}>
-                  <div className={styles.linkFacebook}>
-                    <img
-                      className={styles.svgIcon}
-                      loading="lazy"
-                      alt=""
-                      src="/svg-5.svg"
-                    />
-                  </div>
-                </div>
-                <div className={styles.linkTwittermargin}>
-                  <div className={styles.linkFacebook}>
-                    <img
-                      className={styles.svgIcon}
-                      loading="lazy"
-                      alt=""
-                      src="/svg-6.svg"
-                    />
-                  </div>
-                </div>
-                <div className={styles.linkTwittermargin}>
-                  <div className={styles.linkFacebook}>
-                    <img
-                      className={styles.svgIcon}
-                      loading="lazy"
-                      alt=""
-                      src="/svg-7.svg"
-                    />
-                  </div>
-                </div>
-                <div className={styles.linkTwittermargin}>
-                  <div className={styles.linkFacebook}>
-                    <img
-                      className={styles.svgIcon}
-                      loading="lazy"
-                      alt=""
-                      src="/svg-8.svg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer>
-        </section>
-        <Container1
-          realEstatePropertyForSaleIn={`Real Estate & Property for sale in Australia`}
-          logojpg="/logojpg@2x.png"
-          imagejpg="/imagejpg1@2x.png"
-          logogif="/logogif@2x.png"
-          imagejpg1="/imagejpg-11@2x.png"
-        />
-      </main>
+    <div className={styles.container}>
+      <Header /> {/* Display header */}
+      <div className={styles.content}>
+        <h2>{property.Address}</h2>
+        <div className={styles.propertyDetails}>
+          <img
+            src={property["Image URL"] || "/placeholder-image.jpg"}
+            alt={`Image of ${property.Address}`}
+            className={styles.propertyImage}
+          />
+          <div className={styles.info}>
+            <p><strong>Price:</strong> {property.Price}</p>
+            <p><strong>Bedrooms:</strong> {property.Bedrooms}</p>
+            <p><strong>Bathrooms:</strong> {property.Bathrooms}</p>
+            <p><strong>Description:</strong> {property.Description}</p>
+          </div>
+        </div>
+      </div>
+      <Footer /> {/* Display footer */}
     </div>
   );
 };

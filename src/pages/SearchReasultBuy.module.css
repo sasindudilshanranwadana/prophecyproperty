@@ -1,97 +1,82 @@
-.svgIcon {
-  width: 24px;
-  height: 24px;
-  position: relative;
-}
-.linkFacebook,
-.linkTwittermargin {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-10xs-4) 0 0;
-}
-.linkTwittermargin {
-  padding: 0 0 0 var(--padding-base);
-  margin-left: -0.5px;
-}
-.container1 {
-  width: 1126px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  padding: var(--padding-mini-8) var(--padding-xl);
-  max-width: 100%;
-}
-.background,
-.container,
-.container1,
-.footer {
-  box-sizing: border-box;
-  display: flex;
-}
 .container {
-  width: 100%;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  padding: var(--padding-xs) 0 var(--padding-xs) var(--padding-xs);
-  max-width: 1126px;
-  gap: var(--gap-xl);
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
 }
-.background,
-.footer {
-  flex-direction: column;
-  max-width: 100%;
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
-.background {
-  align-self: stretch;
-  background-color: var(--idrealestatecomau-white);
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--padding-xl);
-}
-.footer {
-  position: absolute;
-  top: 1935px;
-  left: 0;
-  border-top: 0.8px solid var(--wwwrealestatecomau-mischka);
-  width: 1920px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-12xs-8) 0 0;
-}
-.footerParent {
-  align-self: stretch;
-  height: 2015.8px;
-  position: relative;
-  max-width: 100%;
-}
-.searchReasultBuy {
-  width: 100%;
-  position: relative;
-  background-color: var(--idrealestatecomau-white);
+
+.mainContent {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 var(--padding-7xs-2);
-  box-sizing: border-box;
-  line-height: normal;
-  letter-spacing: normal;
+  gap: 20px;
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 1125px) {
-  .container {
-    max-width: 100%;
-  }
+
+.imageSection {
+  flex: 1;
 }
-@media screen and (max-width: 750px) {
-  .footerParent {
-    height: auto;
-    min-height: 2015.8;
-  }
+
+.propertyImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.detailsSection {
+  flex: 2;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.features {
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+  gap: 15px;
+}
+
+.additionalInfo {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.contactSection {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.contactSection h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.contactSection p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.agency {
+  font-weight: bold;
 }
