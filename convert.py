@@ -1,18 +1,37 @@
-import pandas as pd
 import json
+import re
 
-# Load the CSV file
-csv_file_path = 'D:/ProphecyProperty/src/properties.csv'
-json_file_path = 'D:/ProphecyProperty/src/properties.json'
+# Load the JSON data
+with open('properties.json', 'r') as file:
+    data = json.load(file)
 
-# Read CSV
-data = pd.read_csv(csv_file_path)
+# Function to update each property
+def update_property(property):
+    # Parse address to get Lane and City
+    address = property.get("Address", "")
+    lane_match = re.match(r"^(.+?),", address)
+    city_match = re.search(r",\s*([A-Za-z\s]+?)\s+VIC", address)
+    
+    # Update Lane and City fields
+    if lane_match:
+        property["Lane"] = lane_match.group(1).strip()
+    if city_match:
+        property["City"] = city_match.group(1).strip()
 
-# Convert to JSON
-data_json = data.to_dict(orient='records')
+    # Update Search Keywords
+    keywords = set(eval(property.get("Search Keywords", "[]")))
+    if property["City"]:
+        keywords.add(property["City"].lower())
+    if property["Lane"]:
+        keywords.add(property["Lane"].lower())
+    property["Search Keywords"] = str(list(keywords))
 
-# Write to JSON file
-with open(json_file_path, 'w') as json_file:
-    json.dump(data_json, json_file, indent=4)
+# Apply the function to each property in the list
+for prop in data:
+    update_property(prop)
 
-print("JSON file saved at:", json_file_path)
+# Save the updated data back to the JSON file
+with open('properties_updated.json', 'w') as file:
+    json.dump(data, file, indent=4)
+
+print("Properties updated successfully!")

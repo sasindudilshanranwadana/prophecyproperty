@@ -30,6 +30,7 @@ const Container = ({ className = "" }) => {
 
         try {
           const response = await fetch("/properties.json");
+
           const data = await response.json();
 
           const filteredProperties = data.filter((property) =>

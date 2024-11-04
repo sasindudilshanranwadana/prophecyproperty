@@ -14,6 +14,7 @@ const HousingDetails = () => {
 
     try {
       const response = await fetch("/properties.json");
+
       if (!response.ok) throw new Error("Failed to fetch properties data");
 
       const data = await response.json();

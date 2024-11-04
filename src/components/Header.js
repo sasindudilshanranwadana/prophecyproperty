@@ -39,14 +39,14 @@ const Header = ({ className = "" }) => {
         </div>
         <nav className={styles.background}>
           <nav className={styles.nav}>
-            <div className={styles.link1}>
-              <Link to="/" className={styles.buy}>Buy</Link>
-            </div>
             <div className={styles.link2}>
               <Link to="/visualisations" className={styles.buy}>Visualisations</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/ai-models" className={styles.buy}>AI Models</Link>
+              <Link to="/ai-models" className={styles.buy}>Price Prediction</Link>
+            </div>
+            <div className={styles.link2}>
+              <Link to="/recommendation" className={styles.buy}>Recommendations</Link> {/* New link */}
             </div>
           </nav>
         </nav>
