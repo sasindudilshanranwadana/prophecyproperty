@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./News.module.css";
 
-const API_KEY = "11366e547c60447ab9a720caa489b6f3"; // Replace with your actual NewsAPI key
+const API_KEY = "17c01c3c77b84b5484289abfea1657ba";
 
 const News = () => {
   const [articles, setArticles] = useState([]);
@@ -15,7 +15,6 @@ const News = () => {
       setError(null);
 
       try {
-        // Fetch latest real estate news for Victoria, Australia
         const response = await axios.get(`https://newsapi.org/v2/everything`, {
           params: {
             q: "real estate Victoria Australia",
