@@ -15,10 +15,10 @@ import SearchReasultBuy from "./pages/SearchReasultBuy";
 import SearchReasultRent from "./pages/SearchReasultRent";
 import SearchReasultSold from "./pages/SearchReasultSold";
 import Visualisations from "./pages/Visualisations";
-import AiModels from "./pages/AiModels";
 import ProfileDashboard from "./pages/ProfileDashboard";
-import Recommendations from "./pages/Recommendations"; // Updated import
-import PriceTrend from "./pages/PriceTrend"; // Import the new PriceTrend component
+import Recommendations from "./pages/Recommendations";
+import PriceComparison from "./pages/PriceComparison";
+import PriceSimulation from "./pages/PriceSimulation"; // Import the PriceSimulation component
 
 function App() {
   return (
@@ -38,10 +38,10 @@ function App() {
         <Route path="/search-reasult-rent" element={<SearchReasultRent />} />
         <Route path="/search-reasult-sold" element={<SearchReasultSold />} />
         <Route path="/visualisations" element={<Visualisations />} />
-        <Route path="/ai-models" element={<AiModels />} />
         <Route path="/profile" element={<ProfileDashboard />} />
-        <Route path="/recommendation" element={<Recommendations />} /> {/* Updated route */}
-        <Route path="/price-trend" element={<PriceTrend />} /> {/* New PriceTrend route */}
+        <Route path="/recommendation" element={<Recommendations />} />
+        <Route path="/pricecomparison" element={<PriceComparison />} />
+        <Route path="/pricesimulation" element={<PriceSimulation />} /> {/* New route for Price Simulation */}
       </Routes>
     </div>
   );

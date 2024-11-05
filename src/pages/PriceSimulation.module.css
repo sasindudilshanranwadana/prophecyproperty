@@ -1,0 +1,114 @@
+/* PriceSimulation.module.css */
+
+.priceSimulationPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ 
+    font-family: Arial, sans-serif;
+  }
+  
+  .contentWrapper {
+    flex: 1;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .introSection {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .pageTitle {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .pageDescription {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  .controlsSection {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    padding: 20px;
+    border-radius: 8px;
+
+  }
+  
+  .inputLabel {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #495057;
+    flex: 1;
+  }
+  
+  .selectInput, .numberInput {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #495057;
+ 
+    margin-top: 5px;
+
+    transition: border-color 0.2s;
+  }
+  
+  .selectInput:hover, .numberInput:hover {
+    border-color: #007bff;
+  }
+  
+  .selectInput:focus, .numberInput:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  .resultCard {
+
+
+    border-radius: 8px;
+    padding: 20px;
+
+  }
+  
+  .resultRow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    color: #6c757d;
+    font-size: 20px;
+  }
+  
+  .priceLabel, .mortgageLabel {
+    font-size: 18px;
+    color: #495057;
+  }
+  
+  .simulatedPrice {
+    font-size: 24px;
+    color: #28a745;
+    font-weight: bold;
+    margin-left: auto;
+  }
+  
+  .estimatedMortgage {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: auto;
+  }
+  

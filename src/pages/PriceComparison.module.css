@@ -1,0 +1,44 @@
+/* PriceComparison.module.css */
+.priceComparisonPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--idrealestatecomau-white);
+  font-family: Arial, sans-serif;
+}
+
+.contentWrapper {
+  flex: 1;
+  padding: 40px;
+  max-width: 1400px; /* Increased max-width for larger charts */
+  margin: 0 auto;
+}
+
+.introSection {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  color: var(--wwwrealestatecomau-ship-gray);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pageDescription {
+  font-size: 16px;
+  color: var(--wwwrealestatecomau-salt-box);
+  margin-bottom: 20px;
+}
+
+.chartSection {
+  margin-top: 20px;
+  height: 2000px; 
+  width: 1000px;/* Explicit height for chart section */
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

@@ -32,7 +32,7 @@ const Header = ({ className = "" }) => {
       <nav className={styles.container}>
         <div className={styles.linkmargin}>
           <div className={styles.link}>
-            <Link to="/" className={styles.prophecyproperty}> {/* Make title clickable */}
+            <Link to="/" className={styles.prophecyproperty}>
               ProphecyProperty
             </Link>
           </div>
@@ -43,13 +43,13 @@ const Header = ({ className = "" }) => {
               <Link to="/visualisations" className={styles.buy}>Visualisations</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/ai-models" className={styles.buy}>Price Prediction</Link>
+              <Link to="/pricesimulation" className={styles.buy}>Price Simulation</Link> {/* New link for Price Simulation */}
             </div>
             <div className={styles.link2}>
-              <Link to="/recommendation" className={styles.buy}>Recommendations</Link> {/* Existing link */}
+              <Link to="/recommendation" className={styles.buy}>Recommendations</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/price-trend" className={styles.buy}>Price Trend</Link> {/* New link for Price Trend */}
+              <Link to="/pricecomparison" className={styles.buy}>Price Comparison</Link>
             </div>
           </nav>
         </nav>
