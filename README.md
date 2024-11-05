@@ -16,7 +16,7 @@ The project is divided into two main components:
 
 ## **Technologies Used**
 
-- **Backend**: Python, FastAPI, Uvicorn, Flask-CORS
+- **Backend**: Python, FastAPI, Uvicorn, 
 - **Frontend**: JavaScript, React
 - **Machine Learning**: Scikit-Learn (Random Forest model)
 - **Other**: HTML, CSS, JSON
@@ -53,9 +53,9 @@ The project is divided into two main components:
    npm run start
    ```
 
-   This will start the React app on `http://localhost:3000`.
+   This will start the React app on `http://localhost:3001`.
 
-Now, the frontend will be accessible at `http://localhost:3000`, and it will send requests to the FastAPI backend running at `http://localhost:3001`.
+Now, the frontend will be accessible at `http://localhost:3001`, and it will send requests to the FastAPI backend running at `http://localhost:3001`.
 
 ---
 
@@ -84,7 +84,7 @@ The FastAPI backend exposes a single endpoint for price prediction:
 
 ## **Testing the Application**
 
-1. Open your browser and navigate to `http://localhost:3000`.
+1. Open your browser and navigate to `http://localhost:3001`.
 2. Enter a value for the building area (e.g., 500).
 3. Click the "Predict Price" button.
 4. The app will display the predicted price based on the input, fetched from the FastAPI backend running on port 3001.
