@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { auth, db } from "../firebaseConfig"; // Ensure Firebase is configured
+import { auth, db } from "../firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
-import { collection, query, where, getDocs } from "firebase/firestore"; // Firestore functions for querying
+import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
 import styles from "./Recommendations.module.css";
+
+// Haversine formula to calculate distance between two coordinates
+const calculateDistance = (lat1, lon1, lat2, lon2) => {
+  const R = 6371; // Radius of the Earth in km
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLon = (lon2 - lon1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+};
 
 const Recommendations = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -14,52 +27,57 @@ const Recommendations = () => {
   useEffect(() => {
     const fetchRecommendations = async (userId) => {
       try {
-        console.log("Fetching recommendations for user:", userId);
+        const userDocRef = doc(db, "users", userId);
+        const userDoc = await getDoc(userDocRef);
 
-        // Fetch the user's clicked properties from Firestore
-        const userDocRef = db.collection("users").doc(userId);
-        const userDoc = await userDocRef.get();
-
-        if (!userDoc.exists) {
+        if (!userDoc.exists()) {
           setError("User data not found");
           setLoading(false);
           return;
         }
 
-        const userData = userDoc.data();
-        const clickedProperties = userData.clickedProperties || [];
-
+        const clickedProperties = userDoc.data().clickedProperties || [];
         const recommendationsList = [];
 
-        // Query Firestore for each clicked property to fetch similar properties
         for (const address of clickedProperties) {
-          const propertiesQuery = query(
-            collection(db, "properties"),
-            where("Address", "==", address)
-          );
+          const propertyQuery = query(collection(db, "properties"), where("Address", "==", address));
+          const propertySnapshot = await getDocs(propertyQuery);
 
-          const querySnapshot = await getDocs(propertiesQuery);
-          querySnapshot.forEach((doc) => {
-            const propertyData = doc.data();
-            recommendationsList.push(propertyData);
-          });
+          for (const propertyDoc of propertySnapshot.docs) {
+            const { Latitude: lat1, Longitude: lon1, Bedrooms, Bathrooms, Price } = propertyDoc.data();
+
+            const nearbyQuery = query(collection(db, "properties"));
+            const nearbySnapshot = await getDocs(nearbyQuery);
+
+            nearbySnapshot.forEach((doc) => {
+              const propertyData = doc.data();
+              const { Latitude: lat2, Longitude: lon2 } = propertyData;
+              const distance = calculateDistance(lat1, lon1, lat2, lon2);
+
+              if (distance <= 5) {
+                recommendationsList.push({
+                  ...propertyData,
+                  distance,
+                  priceDifference: Math.abs(Price - propertyData.Price),
+                  match: Math.abs(Bedrooms - propertyData.Bedrooms) + Math.abs(Bathrooms - propertyData.Bathrooms)
+                });
+              }
+            });
+          }
         }
 
-        // Sort recommendations by price in ascending order and limit to top 4
         const sortedRecommendations = recommendationsList
-          .sort((a, b) => a.Price - b.Price)
+          .sort((a, b) => a.priceDifference - b.priceDifference || a.match - b.match || a.distance - b.distance)
           .slice(0, 4);
 
         setRecommendations(sortedRecommendations);
       } catch (error) {
-        console.error("Error fetching recommendations:", error);
         setError(`Error fetching recommendations: ${error.message}`);
       } finally {
         setLoading(false);
       }
     };
 
-    // Monitor user's authentication state
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         fetchRecommendations(user.uid);
@@ -69,7 +87,7 @@ const Recommendations = () => {
       }
     });
 
-    return () => unsubscribe(); // Clean up listener on component unmount
+    return () => unsubscribe();
   }, []);
 
   return (
