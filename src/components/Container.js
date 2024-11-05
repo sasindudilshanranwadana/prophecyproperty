@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { db, auth } from '../firebaseConfig';  // Ensure Firebase is configured
+import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import styles from "./Container.module.css";
 
 const Container = ({ className = "" }) => {
@@ -19,6 +21,18 @@ const Container = ({ className = "" }) => {
     };
   };
 
+  // Function to record search term and clicked address in Firestore
+  const recordSearchTermAndAddress = async (searchTerm, clickedAddress) => {
+    const user = auth.currentUser;
+    if (user) {
+      const userRef = doc(db, "users", user.uid);
+      await updateDoc(userRef, {
+        searchTerms: arrayUnion(searchTerm),  // Add search term without duplicates
+        clickedProperties: arrayUnion(clickedAddress) // Add clicked address
+      });
+    }
+  };
+
   // Fetch data from properties.json with debounced filtering
   const fetchSuggestionsFromJSON = useCallback(
     debounce(async (inputQuery) => {
@@ -30,7 +44,6 @@ const Container = ({ className = "" }) => {
 
         try {
           const response = await fetch("/properties.json");
-
           const data = await response.json();
 
           const filteredProperties = data.filter((property) =>
@@ -38,6 +51,10 @@ const Container = ({ className = "" }) => {
           ).slice(0, 10); // Limit results to first 10 matches
 
           setSuggestions(filteredProperties);
+
+          // Record the search term in Firestore
+          await recordSearchTermAndAddress(inputQuery, lowercaseQuery);
+
         } catch (err) {
           console.error("Error loading JSON:", err);
           setError("Failed to load data from JSON.");
@@ -59,6 +76,8 @@ const Container = ({ className = "" }) => {
 
   // Navigate to SearchReasultBuy page with selected property data
   const handleSuggestionClick = (property) => {
+    // Record clicked property address before navigation
+    recordSearchTermAndAddress(queryText, property.Address); // Track clicked address and search term
     navigate("/search-reasult-buy", { state: { property } });
   };
 

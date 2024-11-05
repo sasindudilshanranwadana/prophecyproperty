@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { db, auth } from "../firebaseConfig";  // Ensure Firebase is configured
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import styles from "./HousingDetails.module.css";
 
 const HousingDetails = () => {
@@ -27,7 +29,19 @@ const HousingDetails = () => {
     }
   };
 
+  // Function to record clicked property in Firestore
+  const recordClickedProperty = async (property) => {
+    const user = auth.currentUser;
+    if (user) {
+      const userRef = doc(db, "users", user.uid);
+      await updateDoc(userRef, {
+        clickedProperties: arrayUnion(property.Address)  // Use property ID or Address as needed
+      });
+    }
+  };
+
   const handlePropertyClick = (property) => {
+    recordClickedProperty(property);  // Track the click in Firestore
     navigate("/search-reasult-buy", { state: { property } });
   };
 

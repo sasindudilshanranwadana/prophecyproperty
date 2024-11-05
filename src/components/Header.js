@@ -46,7 +46,10 @@ const Header = ({ className = "" }) => {
               <Link to="/ai-models" className={styles.buy}>Price Prediction</Link>
             </div>
             <div className={styles.link2}>
-              <Link to="/recommendation" className={styles.buy}>Recommendations</Link> {/* New link */}
+              <Link to="/recommendation" className={styles.buy}>Recommendations</Link> {/* Existing link */}
+            </div>
+            <div className={styles.link2}>
+              <Link to="/price-trend" className={styles.buy}>Price Trend</Link> {/* New link for Price Trend */}
             </div>
           </nav>
         </nav>

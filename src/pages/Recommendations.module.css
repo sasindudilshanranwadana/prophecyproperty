@@ -1,104 +1,116 @@
 .recommendationsPage {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .contentWrapper {
-    flex: 1;
-    padding: 40px;
-  }
-  
-  .introSection {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .pageTitle {
-    font-size: 2.5em;
-    color: #000;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  
-  .pageDescription {
-    font-size: 1.1em;
-    color: #000;
-    margin-bottom: 20px;
-  }
-  
-  .bulletPoints {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-    text-align: left;
-    color: #000;
-  }
-  
-  .bulletPoints li {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 1.1em;
-    padding: 8px 0;
-  }
-  
-  .bulletPoints li strong {
-    margin-left: 5px;
-  }
-  
-  .recommendationsSection {
-    padding: 30px;
-  }
-  
-  .recommendationsTitle {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-  }
-  
-  .recommendationsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .noSearchMessage {
-    font-size: 1.1em;
-    color: #000;
-    margin-top: 20px;
-    text-align: center;
-    font-style: italic;
-  }
-  
-  .recommendationItem {
-    width: 180px;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .housingImage {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-  }
-  
-  .housingDetails {
-    padding: 8px;
-  }
-  
-  .housingAddress {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .housingInfo, .housingPrice {
-    font-size: 0.9em;
-    margin-bottom: 4px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--idrealestatecomau-white);
+  font-family: Arial, sans-serif;
+}
+
+.contentWrapper {
+  flex: 1;
+  padding: 40px;
+  max-width: 1142px;
+  margin: 0 auto;
+}
+
+.introSection {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pageTitle {
+  font-size: var(--wwwrealestatecomau-inter-semi-bold-2194-size);
+  color: var(--wwwrealestatecomau-ship-gray);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pageDescription {
+  font-size: var(--wwwrealestatecomau-inter-regular-15-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  margin-bottom: 20px;
+}
+
+.bulletPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+  color: var(--wwwrealestatecomau-salt-box);
+}
+
+.bulletPoints li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: var(--wwwrealestatecomau-inter-regular-1538-size);
+  padding: 8px 0;
+}
+
+.bulletPoints li strong {
+  margin-left: 5px;
+}
+
+.recommendationsSection {
+  padding: 30px;
+}
+
+.recommendationsTitle {
+  font-size: var(--wwwrealestatecomau-inter-semi-bold-2213-size);
+  color: var(--wwwrealestatecomau-blue);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.recommendationsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.noSearchMessage {
+  font-size: var(--wwwrealestatecomau-inter-regular-1144-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.recommendationItem {
+  width: 180px;
+  background: #fff;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.recommendationItem:hover {
+  transform: scale(1.05);
+}
+
+.housingImage {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.housingDetails {
+  padding: 8px;
+}
+
+.housingAddress {
+  font-size: var(--wwwrealestatecomau-inter-medium-145-size);
+  font-weight: bold;
+  color: var(--wwwrealestatecomau-ship-gray);
+  margin-bottom: 5px;
+}
+
+.housingInfo, .housingPrice {
+  font-size: var(--wwwrealestatecomau-inter-regular-15-size);
+  color: var(--wwwrealestatecomau-salt-box);
+  margin-bottom: 4px;
+}

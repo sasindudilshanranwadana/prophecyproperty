@@ -1,46 +1,86 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { auth, db } from "../firebaseConfig"; // Ensure Firebase is configured
+import { onAuthStateChanged } from "firebase/auth";
+import { collection, query, where, getDocs } from "firebase/firestore"; // Firestore functions for querying
 import styles from "./Recommendations.module.css";
 
 const Recommendations = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchRecommendations = async () => {
+    const fetchRecommendations = async (userId) => {
       try {
-        const response = await fetch("/searchTerms.json"); // Replace with actual path to JSON file
-        const data = await response.json();
-        setRecommendations(data);
+        console.log("Fetching recommendations for user:", userId);
+
+        // Fetch the user's clicked properties from Firestore
+        const userDocRef = db.collection("users").doc(userId);
+        const userDoc = await userDocRef.get();
+
+        if (!userDoc.exists) {
+          setError("User data not found");
+          setLoading(false);
+          return;
+        }
+
+        const userData = userDoc.data();
+        const clickedProperties = userData.clickedProperties || [];
+
+        const recommendationsList = [];
+
+        // Query Firestore for each clicked property to fetch similar properties
+        for (const address of clickedProperties) {
+          const propertiesQuery = query(
+            collection(db, "properties"),
+            where("Address", "==", address)
+          );
+
+          const querySnapshot = await getDocs(propertiesQuery);
+          querySnapshot.forEach((doc) => {
+            const propertyData = doc.data();
+            recommendationsList.push(propertyData);
+          });
+        }
+
+        // Sort recommendations by price in ascending order and limit to top 4
+        const sortedRecommendations = recommendationsList
+          .sort((a, b) => a.Price - b.Price)
+          .slice(0, 4);
+
+        setRecommendations(sortedRecommendations);
       } catch (error) {
         console.error("Error fetching recommendations:", error);
+        setError(`Error fetching recommendations: ${error.message}`);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchRecommendations();
+    // Monitor user's authentication state
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        fetchRecommendations(user.uid);
+      } else {
+        setError("User is not logged in.");
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe(); // Clean up listener on component unmount
   }, []);
 
   return (
     <div className={styles.recommendationsPage}>
-      {/* Header */}
       <Header />
-
-      {/* Main Content */}
       <main className={styles.contentWrapper}>
         <section className={styles.introSection}>
           <h2 className={styles.pageTitle}>Personalized Property Recommendations</h2>
           <p className={styles.pageDescription}>
             Discover properties selected just for you based on your recent searches and preferences:
           </p>
-          <ul className={styles.bulletPoints}>
-            <li>💼 <strong>Curated Listings:</strong> Properties matched to your location and budget.</li>
-            <li>📍 <strong>Nearby Locations:</strong> Recommendations within a 5km radius of your recent searches.</li>
-            <li>📈 <strong>Best Price Options:</strong> Our AI picks properties with optimal price points.</li>
-            <li>🏠 <strong>Similar Amenities:</strong> Listings with amenities similar to those you've explored.</li>
-          </ul>
         </section>
 
         <section className={styles.recommendationsSection}>
@@ -48,6 +88,8 @@ const Recommendations = () => {
           <div className={styles.recommendationsList}>
             {loading ? (
               <p>Loading your top recommendations...</p>
+            ) : error ? (
+              <p className={styles.error}>{error}</p>
             ) : recommendations.length > 0 ? (
               recommendations.map((property, index) => (
                 <div key={index} className={styles.recommendationItem}>
@@ -61,20 +103,16 @@ const Recommendations = () => {
                     <p className={styles.housingInfo}>
                       {property.Bedrooms} beds • {property.Bathrooms} baths
                     </p>
-                    <p className={styles.housingPrice}>Price: {property.Price}</p>
+                    <p className={styles.housingPrice}>Price: ${property.Price.toLocaleString()}</p>
                   </div>
                 </div>
               ))
             ) : (
-              <p className={styles.noSearchMessage}>
-                No recent searches found. Please start a search to receive personalized recommendations.
-              </p>
+              <p>No recommendations available at the moment.</p>
             )}
           </div>
         </section>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
