@@ -1,7 +1,3 @@
-
-
----
-
 # **Price Predictor Application**
 
 This project is a full-stack web application that predicts the price of a building based on the provided building area. The application uses **FastAPI** for the backend, which performs the prediction and exposes an API, and **React** for the frontend, providing a user interface for data entry and displaying the predicted price.
@@ -32,13 +28,13 @@ The project is divided into two main components:
 ### **Start Backend**
 
 1. Ensure you’re in the `ProphecyProperty/` directory.
-2. Start the FastAPI backend server by running:
+2. Start the FastAPI backend server on port 3001 by running:
 
    ```bash
-   uvicorn app:app --reload
+   uvicorn app:app --reload --port 3001
    ```
 
-   This command will start the FastAPI server at `http://localhost:8000`.
+   This command will start the FastAPI server at `http://localhost:3001`.
 
 3. **Note**: Ensure that the trained model and scaler are available as `random_forest_model.pkl` and `scaler.pkl`, respectively, in the backend directory.
 
@@ -54,12 +50,12 @@ The project is divided into two main components:
 3. Start the React frontend application by running:
 
    ```bash
-   npm start
+   npm run start
    ```
 
    This will start the React app on `http://localhost:3000`.
 
-Now, the frontend will be accessible at `http://localhost:3000`, and it will send requests to the FastAPI backend running at `http://localhost:8000`.
+Now, the frontend will be accessible at `http://localhost:3000`, and it will send requests to the FastAPI backend running at `http://localhost:3001`.
 
 ---
 
@@ -91,7 +87,7 @@ The FastAPI backend exposes a single endpoint for price prediction:
 1. Open your browser and navigate to `http://localhost:3000`.
 2. Enter a value for the building area (e.g., 500).
 3. Click the "Predict Price" button.
-4. The app will display the predicted price based on the input, fetched from the FastAPI backend.
+4. The app will display the predicted price based on the input, fetched from the FastAPI backend running on port 3001.
 
 ---
 
@@ -137,35 +133,9 @@ with open('scaler.pkl', 'wb') as scaler_file:
 print(X_train_scaled[:5])
 ```
 
-### 2. Random Forest Regression Code
+---
 
-```python
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, r2_score
-import pickle
-
-# Initialize the Random Forest Regressor
-rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
-
-# Train the model
-rf_model.fit(X_train_scaled, y_train)
-
-# Save the trained model
-with open('random_forest_model.pkl', 'wb') as model_file:
-    pickle.dump(rf_model, model_file)
-
-# Make predictions on the test set
-y_pred = rf_model.predict(X_test_scaled)
-
-# Evaluate the model
-mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
-
-print(f"Mean Squared Error: {mse}")
-print(f"R-squared Score: {r2}")
-```
-
-### 3. FastAPI Web Application Code
+### 2. FastAPI Web Application Code
 
 ```python
 from fastapi import FastAPI, HTTPException
@@ -213,3 +183,5 @@ async def predict_price(data: BuildingArea):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 ```
+
+--- 
