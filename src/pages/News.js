@@ -23,6 +23,10 @@ const News = () => {
             sortBy: "publishedAt",
             pageSize: 5,
           },
+          headers: {
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0", // Mimics a browser request
+          },
         });
 
         if (response.status === 200) {
