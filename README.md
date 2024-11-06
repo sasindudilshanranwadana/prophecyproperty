@@ -1,25 +1,29 @@
-# **Price Predictor Application**
-
-This project is a full-stack web application that predicts the price of a building based on the provided building area. The application uses **FastAPI** for the backend, which performs the prediction and exposes an API, and **React** for the frontend, providing a user interface for data entry and displaying the predicted price.
-
+# **ProphecyProperty: AI-Powered Housing Market Insights and Predictions**
 ---
 
 ## **Overview**
 
-This project demonstrates a simple web-based price prediction tool. Users input the building area, and the app predicts the price based on a machine learning model (currently a Random Forest model, with flexibility to implement more models later).
+ProphecyProperty is an AI-driven web application designed to provide users with actionable insights into Melbourne’s housing market. This application leverages machine learning models to offer real-time price estimations, market trend predictions, and nearby property recommendations. The platform is developed to serve real estate stakeholders by providing data-driven insights for better decision-making.
 
-The project is divided into two main components:
-- **FastAPI Backend**: Handles the prediction logic and serves prediction results.
-- **React Frontend**: Provides a user interface for entering building area and displays the predicted price.
+##**Core Features**
+Real-Time Price Estimation: Estimates the property price range based on user inputs like location, bedroom count, and bathroom count.
+Market Trend Prediction: Uses a linear regression model to forecast property price trends over the next 12 months.
+Nearby Property Recommendations: Recommends nearby properties within a specified radius based on user preferences.
+Data Visualization: Interactive charts and maps provide a user-friendly interface to explore property values, trends, and nearby recommendations.
 
 ---
 
 ## **Technologies Used**
 
-- **Backend**: Python, FastAPI, Uvicorn, 
-- **Frontend**: JavaScript, React
-- **Machine Learning**: Scikit-Learn (Random Forest model)
-- **Other**: HTML, CSS, JSON
+Frontend: React.js, Redux for state management
+Backend: FastAPI
+Database: Google Firebase Firestore for secure and scalable data storage
+AI Models: 
+**Model 1** - Nearby Property Recommendations: Uses geolocation data to recommend nearby properties within a specified radius, assisting users in exploring options close to a selected address.
+**Model 2** - Market Trend Prediction: A linear regression model that forecasts property price trends over the next 12 months, enabling users to visualize potential market shifts.
+**Model 3** - Property Price Estimation: Powered by a Random Forest Regression model, this estimator provides a price range (minimum, average, maximum) based on property characteristics like location, bedroom, and bathroom count.
+Deployment: Firebase for authentication and FastAPI for serving the AI models
+
 
 ---
 
