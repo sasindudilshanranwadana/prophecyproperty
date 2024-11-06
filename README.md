@@ -1,29 +1,30 @@
 # **ProphecyProperty: AI-Powered Housing Market Insights and Predictions**
+
 ---
 
 ## **Overview**
 
 ProphecyProperty is an AI-driven web application designed to provide users with actionable insights into Melbourne’s housing market. This application leverages machine learning models to offer real-time price estimations, market trend predictions, and nearby property recommendations. The platform is developed to serve real estate stakeholders by providing data-driven insights for better decision-making.
 
-##**Core Features**
-Real-Time Price Estimation: Estimates the property price range based on user inputs like location, bedroom count, and bathroom count.
-Market Trend Prediction: Uses a linear regression model to forecast property price trends over the next 12 months.
-Nearby Property Recommendations: Recommends nearby properties within a specified radius based on user preferences.
-Data Visualization: Interactive charts and maps provide a user-friendly interface to explore property values, trends, and nearby recommendations.
+## **Core Features**
+
+- **Real-Time Price Estimation**: Estimates the property price range based on user inputs like location, bedroom count, and bathroom count.
+- **Market Trend Prediction**: Uses a linear regression model to forecast property price trends over the next 12 months.
+- **Nearby Property Recommendations**: Recommends nearby properties within a specified radius based on user preferences.
+- **Data Visualization**: Interactive charts and maps provide a user-friendly interface to explore property values, trends, and nearby recommendations.
 
 ---
 
 ## **Technologies Used**
 
-1.Frontend: React.js, Redux for state management
-2.Backend: FastAPI
-3.Database: Google Firebase Firestore for secure and scalable data storage
-4.AI Models: 
-**Model 1** - Nearby Property Recommendations: Uses geolocation data to recommend nearby properties within a specified radius, assisting users in exploring options close to a selected address.
-**Model 2** - Market Trend Prediction: A linear regression model that forecasts property price trends over the next 12 months, enabling users to visualize potential market shifts.
-**Model 3** - Property Price Estimation: Powered by a Random Forest Regression model, this estimator provides a price range (minimum, average, maximum) based on property characteristics like location, bedroom, and bathroom count.
-5.Deployment: Firebase for authentication and FastAPI for serving the AI models
-
+1. **Frontend**: React.js, Redux for state management
+2. **Backend**: FastAPI
+3. **Database**: Google Firebase Firestore for secure and scalable data storage
+4. **AI Models**:
+   - **Model 1** - Nearby Property Recommendations: Uses geolocation data to recommend nearby properties within a specified radius, assisting users in exploring options close to a selected address.
+   - **Model 2** - Market Trend Prediction: A linear regression model that forecasts property price trends over the next 12 months, enabling users to visualize potential market shifts.
+   - **Model 3** - Property Price Estimation: Powered by a Random Forest Regression model, this estimator provides a price range (minimum, average, maximum) based on property characteristics like location, bedroom, and bathroom count.
+5. **Deployment**: Firebase for authentication and FastAPI for serving the AI models
 
 ---
 
@@ -189,3 +190,6 @@ async def predict_price(data: BuildingArea):
 ```
 
 --- 
+```
+
+This `README.md` is formatted for easy viewing and use on GitHub, with clear sections for setup, API usage, future enhancements, and example code snippets. Let me know if you want to add more details.
