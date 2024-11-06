@@ -15,14 +15,14 @@ Data Visualization: Interactive charts and maps provide a user-friendly interfac
 
 ## **Technologies Used**
 
-Frontend: React.js, Redux for state management
-Backend: FastAPI
-Database: Google Firebase Firestore for secure and scalable data storage
-AI Models: 
+1.Frontend: React.js, Redux for state management
+2.Backend: FastAPI
+3.Database: Google Firebase Firestore for secure and scalable data storage
+4.AI Models: 
 **Model 1** - Nearby Property Recommendations: Uses geolocation data to recommend nearby properties within a specified radius, assisting users in exploring options close to a selected address.
 **Model 2** - Market Trend Prediction: A linear regression model that forecasts property price trends over the next 12 months, enabling users to visualize potential market shifts.
 **Model 3** - Property Price Estimation: Powered by a Random Forest Regression model, this estimator provides a price range (minimum, average, maximum) based on property characteristics like location, bedroom, and bathroom count.
-Deployment: Firebase for authentication and FastAPI for serving the AI models
+5.Deployment: Firebase for authentication and FastAPI for serving the AI models
 
 
 ---
