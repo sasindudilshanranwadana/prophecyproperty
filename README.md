@@ -191,5 +191,3 @@ async def predict_price(data: BuildingArea):
 
 --- 
 ```
-
-This `README.md` is formatted for easy viewing and use on GitHub, with clear sections for setup, API usage, future enhancements, and example code snippets. Let me know if you want to add more details.
